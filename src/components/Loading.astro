@@ -1,0 +1,37 @@
+<div
+  class="text-3xl loading flex justify-center items-center flex-col h-screen"
+>
+  <img
+    class="animate-fade animate-delay-300 w-[1000px] mb-4"
+    src="/logo_loading.png"
+    alt="loading-logo"
+  />
+  <h1
+    class="animate-fade animate-delay-600 font-Roboto font-normal px-4 text-wrap text-center"
+  >
+    ¡Preparando los sabores frescos de nuestra distribuidora de productos
+    lácteos para ti!
+  </h1>
+</div>
+
+<script>
+  setTimeout(function () {
+    const loadingComponent = document.querySelector(".loading");
+    if (loadingComponent) {
+      const loadingComponent = document.querySelector(
+        ".loading"
+      ) as HTMLElement;
+      loadingComponent.style.display = "none";
+    }
+
+    const pageContent = document.querySelector(".page-content") as HTMLElement;
+    if (pageContent) {
+      pageContent.style.display = "block";
+    }
+  }, 2000);
+</script>
+
+<style>
+  .loading {
+  }
+</style>
