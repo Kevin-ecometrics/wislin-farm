@@ -1,50 +1,47 @@
-<nav class="w-4/5 mx-auto py-4">
-  <div class="flex justify-between items-center">
-    <a href="/">
-      <img src="/logo_loading.png" class="w-48" alt="WislinFarmLogo" />
-    </a>
-    <ul class="flex justify-evenly items-center w-1/2">
-      <li class="text-2xl font-Roboto font-normal hover:text-red-400">
-        <a href="">Inicio</a>
-      </li>
-      <li class="text-2xl font-Roboto font-normal hover:text-red-400">
-        <a href="">Acerca de</a>
-      </li>
-      <li class="text-2xl font-Roboto font-normal hover:text-red-400">
-        <a href="">Productos</a>
-      </li>
-      <li class="text-2xl font-Roboto font-normal hover:text-red-400">
-        <a href="">Contacto</a>
-      </li>
-    </ul>
-    <!-- <img id="darkModeToggle" src="/sun.svg" alt="DarkModeToggle" /> -->
-  </div>
-  <!-- <div class="flex justify-center items-center gap-2 absolute py-4 px-36">
-    <button class="px-16 bg-[#F8F6EF] py-4 text-black items-center"
-      >Inicio</button
-    >
-    <button class="px-16 bg-[#F8F6EF] py-4 text-black items-center"
-      >Acerca De</button
-    >
-    <button class="px-16 bg-[#F8F6EF] py-4 text-black items-center"
-      >Servicios</button
-    >
-    <button class="px-16 bg-[#F8F6EF] py-4 text-black items-center"
-      >Productos</button
-    >
-    <button class="px-16 bg-[#F8F6EF] py-4 text-black items-center">Blog</button
-    >
-  </div> -->
-</nav>
+---
+import { Astronav, MenuItems, MenuIcon, StickyHeader } from "astro-navbar";
+---
 
-<script>
-  const darkModeToggle = document.getElementById("darkModeToggle");
-  darkModeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    if (document.body.classList.contains("dark")) {
-      darkModeToggle.src = "/moon.svg";
-    } else {
-      darkModeToggle.src = "/sun.svg";
-    }
-  });
-</script>
+<StickyHeader
+  class="sticky top-0 border-b z-20 transition-all"
+  scrollY={50}
+  defaultClass="py-5 border-transparent"
+  activeClass="py-2 bg-white/80 border-gray-200 backdrop-blur-lg"
+>
+  <header class="lg:flex justify-between p-5 gap-5 mx-auto container w-4/5">
+    <Astronav closeOnClick>
+      <div class="flex w-full lg:w-auto justify-between">
+        <a>
+          <img src="/logo_loading.png" class="h-24" alt="" />
+        </a>
+        <div class="flex items-center lg:hidden">
+          <MenuIcon class="w-8 h-8 text-gray-800" />
+        </div>
+      </div>
+      <MenuItems class="hidden lg:flex">
+        <ul
+          class="flex flex-col md:items-center px-6 text-xl lg:flex-row lg:gap-5"
+        >
+          <li>
+            <a href="/" class="hover:text-red-500 hover:underline">Inicio</a>
+          </li>
+          <li>
+            <a href="/about" class="hover:text-red-500 hover:underline"
+              >Acerca de</a
+            >
+          </li>
+          <li>
+            <a href="/services" class="hover:text-red-500 hover:underline"
+              >Servicios
+            </a>
+          </li>
+          <li>
+            <a href="/contact" class="hover:text-red-500 hover:underline"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </MenuItems>
+    </Astronav>
+  </header>
+</StickyHeader>
