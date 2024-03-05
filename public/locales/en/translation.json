@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "inicio": "Home",
+    "acerca": "About",
+    "productos": "Products",
+    "contacto": "Contact",
+    "servicios": "Services",
+    "Español": "Spanish",
+    "Ingles": "English"
+  },
+  "loading": {
+    "title": "Preparing the fresh flavors of our dairy products distributor for you!"
+  },
+  "hero":{
+    "title": "Welcome to our family business",
+    "subtitle": "We are a family business with more than 30 years and 3 generations of presence in Baja California, dedicated to the production and sale of artisanal dairy products. The cheeses we make are made with pasteurized cow's milk, free of hormones, additives and preservatives. Every day we create unique and original products thanks to the skills and knowledge of our artisans. Our goal as a company is to offer the best and freshest products with the highest quality that distinguishes us.    ",
+    "productos": "See products",
+    "servicios": "See services",
+    "parrafo": "We are focused on the production and distribution of pork and beef cheese and chorizo.    "
+  },
+  "footer": {
+    "title": "All Rights Reserved"
+  }
+
+
+}

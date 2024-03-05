@@ -1,16 +1,21 @@
+---
+import { Image } from "astro:assets";
+import { t } from "i18next";
+import Logo from "@assets/logo_loading.png";
+---
+
 <div
   class="text-3xl loading flex justify-center items-center flex-col h-screen"
 >
-  <img
+  <Image
     class="animate-fade animate-delay-300 w-[1000px] mb-4"
-    src="/logo_loading.png"
+    src={Logo}
     alt="loading-logo"
   />
   <h1
-    class="animate-fade animate-delay-600 font-Roboto font-normal px-4 text-wrap text-center"
+    class="animate-fade animate-delay-600 font-Roboto font-normal px-24 text-5xl text-wrap text-center"
   >
-    ¡Preparando los sabores frescos de nuestra distribuidora de productos
-    lácteos para ti!
+    {t("loading.title")}
   </h1>
 </div>
 

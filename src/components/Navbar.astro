@@ -1,5 +1,15 @@
 ---
-import { Astronav, MenuItems, MenuIcon, StickyHeader } from "astro-navbar";
+import {
+  Astronav,
+  MenuItems,
+  MenuIcon,
+  StickyHeader,
+  Dropdown,
+  DropdownItems,
+} from "astro-navbar";
+import { Image } from "astro:assets";
+import { t } from "i18next";
+import Logo from "@assets/logo_loading.png";
 ---
 
 <StickyHeader
@@ -12,7 +22,7 @@ import { Astronav, MenuItems, MenuIcon, StickyHeader } from "astro-navbar";
     <Astronav closeOnClick>
       <div class="flex w-full lg:w-auto justify-between">
         <a>
-          <img src="/logo_loading.png" class="h-24" alt="" />
+          <Image src={Logo} class="w-52" alt="Logo" />
         </a>
         <div class="flex items-center lg:hidden">
           <MenuIcon class="w-8 h-8 text-gray-800" />
@@ -23,22 +33,94 @@ import { Astronav, MenuItems, MenuIcon, StickyHeader } from "astro-navbar";
           class="flex flex-col md:items-center px-6 text-xl lg:flex-row lg:gap-5"
         >
           <li>
-            <a href="/" class="hover:text-red-500 hover:underline">Inicio</a>
-          </li>
-          <li>
-            <a href="/about" class="hover:text-red-500 hover:underline"
-              >Acerca de</a
-            >
-          </li>
-          <li>
-            <a href="/services" class="hover:text-red-500 hover:underline"
-              >Servicios
+            <a href="/" class="hover:text-red-500 hover:underline">
+              {t("nav.inicio")}
             </a>
           </li>
           <li>
-            <a href="/contact" class="hover:text-red-500 hover:underline"
-              >Contacto</a
-            >
+            <a href="/about" class="hover:text-red-500 hover:underline">
+              {t("nav.acerca")}
+            </a>
+          </li>
+          <li>
+            <a href="/services" class="hover:text-red-500 hover:underline">
+              {t("nav.servicios")}
+            </a>
+          </li>
+          <li>
+            <a href="/contact" class="hover:text-red-500 hover:underline">
+              {t("nav.contacto")}
+            </a>
+          </li>
+          <li class="relative">
+            <Dropdown class="group">
+              {
+                Astro.url.pathname === "/" ? (
+                  <button
+                    id="language-button"
+                    class="rounded-xl border-red-500 border p-2 flex justify-center items-center gap-2"
+                  >
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg"
+                      alt="Mexican Flag"
+                      class="w-12 h-6"
+                    />
+                    Español
+                  </button>
+                ) : (
+                  <button
+                    id="language-button"
+                    class="rounded-xl border-red-500 border p-2 flex justify-center items-center gap-2"
+                  >
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
+                      alt="US Flag"
+                      class="w-12 h-6"
+                    />
+                    English
+                  </button>
+                )
+              }
+              <DropdownItems>
+                <div
+                  class="lg:absolute bg-white hover:bg-slate-100 top-14 w-36 border shadow rounded p-2"
+                >
+                  <ul>
+                    {
+                      Astro.url.pathname === "/" ? (
+                        <li>
+                          <a
+                            class="flex justify-start items-center gap-2"
+                            href="/en"
+                          >
+                            <img
+                              src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
+                              alt="US Flag"
+                              class="w-12 h-6"
+                            />
+                            {t("nav.Ingles")}
+                          </a>
+                        </li>
+                      ) : (
+                        <li>
+                          <a
+                            class="flex justify-start items-center gap-2"
+                            href="/"
+                          >
+                            <img
+                              src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg"
+                              alt="Mexican Flag"
+                              class="w-12 h-6"
+                            />
+                            {t("nav.Español")}
+                          </a>
+                        </li>
+                      )
+                    }
+                  </ul>
+                </div>
+              </DropdownItems>
+            </Dropdown>
           </li>
         </ul>
       </MenuItems>
