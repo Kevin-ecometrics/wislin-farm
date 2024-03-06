@@ -20,6 +20,11 @@
   },
   "footer": {
     "title": "Todos los derechos reservados"
+  },
+  "404": {
+    "title": "404",
+    "subtitle": "Pagina no encontrada",
+    "parrafo": "La pagina que buscas no existe o ha sido eliminada. Por favor regresa a la pagina de inicio."
   }
 
 

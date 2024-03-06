@@ -10,6 +10,52 @@ import {
 import { Image } from "astro:assets";
 import { t } from "i18next";
 import Logo from "@assets/logo_loading.png";
+
+const menuMex = [
+  {
+    name: "Inicio",
+    link: "/",
+  },
+  {
+    name: "Productos",
+    link: "/productos",
+  },
+  {
+    name: "Acerca",
+    link: "/about",
+  },
+  {
+    name: "Servicios",
+    link: "/services",
+  },
+  {
+    name: "Contacto",
+    link: "/contact",
+  },
+];
+
+const menuEng = [
+  {
+    name: "Inicio",
+    link: "/en",
+  },
+  {
+    name: "Productos",
+    link: "/en/productos",
+  },
+  {
+    name: "Acerca",
+    link: "/en/about",
+  },
+  {
+    name: "Servicios",
+    link: "/en/services",
+  },
+  {
+    name: "Contacto",
+    link: "/en/contact",
+  },
+];
 ---
 
 <StickyHeader
@@ -22,40 +68,39 @@ import Logo from "@assets/logo_loading.png";
     <Astronav closeOnClick>
       <div class="flex w-full lg:w-auto justify-between">
         <a>
+          <!-- Icono de la empresa -->
           <Image src={Logo} class="w-52" alt="Logo" />
         </a>
         <div class="flex items-center lg:hidden">
+          <!-- Icono Menu Mobile -->
           <MenuIcon class="w-8 h-8 text-gray-800" />
         </div>
       </div>
       <MenuItems class="hidden lg:flex">
+        <!-- lista de los elementos del navbar -->
         <ul
           class="flex flex-col md:items-center px-6 text-xl lg:flex-row lg:gap-5"
         >
-          <li>
-            <a href="/" class="hover:text-red-500 hover:underline">
-              {t("nav.inicio")}
-            </a>
-          </li>
-          <li>
-            <a href="/about" class="hover:text-red-500 hover:underline">
-              {t("nav.acerca")}
-            </a>
-          </li>
-          <li>
-            <a href="/services" class="hover:text-red-500 hover:underline">
-              {t("nav.servicios")}
-            </a>
-          </li>
-          <li>
-            <a href="/contact" class="hover:text-red-500 hover:underline">
-              {t("nav.contacto")}
-            </a>
-          </li>
+          {
+            (Astro.url.pathname === "/" || Astro.url.pathname === "/productos"
+              ? menuMex
+              : menuEng
+            ).map((item) => (
+              <li>
+                <a
+                  href={item.link}
+                  class={`${Astro.url.pathname === item.link ? "text-red-500" : "text-black"} hover:text-red-500 hover:underline`}
+                >
+                  {t(`nav.${item.name.toLowerCase()}`)}
+                </a>
+              </li>
+            ))
+          }
+          <!-- Dropdown de idioma -->
           <li class="relative">
             <Dropdown class="group">
               {
-                Astro.url.pathname === "/" ? (
+                menuMex.some((item) => item.link === Astro.url.pathname) ? (
                   <button
                     id="language-button"
                     class="rounded-xl border-red-500 border p-2 flex justify-center items-center gap-2"
@@ -67,7 +112,7 @@ import Logo from "@assets/logo_loading.png";
                     />
                     Español
                   </button>
-                ) : (
+                ) : menuEng.some((item) => item.link === Astro.url.pathname) ? (
                   <button
                     id="language-button"
                     class="rounded-xl border-red-500 border p-2 flex justify-center items-center gap-2"
@@ -79,15 +124,18 @@ import Logo from "@assets/logo_loading.png";
                     />
                     English
                   </button>
-                )
+                ) : null
               }
+              <!-- Efecto de dropdown con el idioma a cambiar -->
               <DropdownItems>
                 <div
                   class="lg:absolute bg-white hover:bg-slate-100 top-14 w-36 border shadow rounded p-2"
                 >
                   <ul>
                     {
-                      Astro.url.pathname === "/" ? (
+                      menuMex.some(
+                        (item) => item.link === Astro.url.pathname
+                      ) ? (
                         <li>
                           <a
                             class="flex justify-start items-center gap-2"
@@ -101,7 +149,9 @@ import Logo from "@assets/logo_loading.png";
                             {t("nav.Ingles")}
                           </a>
                         </li>
-                      ) : (
+                      ) : menuEng.some(
+                          (item) => item.link === Astro.url.pathname
+                        ) ? (
                         <li>
                           <a
                             class="flex justify-start items-center gap-2"
@@ -115,7 +165,7 @@ import Logo from "@assets/logo_loading.png";
                             {t("nav.Español")}
                           </a>
                         </li>
-                      )
+                      ) : null
                     }
                   </ul>
                 </div>
