@@ -7,7 +7,7 @@ changeLanguage("en");
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <title>404: Not Found</title>
@@ -22,6 +22,7 @@ changeLanguage("en");
         --gray-70: hsl(258, 7%, 70%);
         --gray-80: hsl(258, 7%, 80%);
         --gray-90: hsl(258, 7%, 90%);
+        --white: hsl(258, 7%, 100%);
         --black: #13151a;
         --accent-light: #e0ccfa;
       }
@@ -37,7 +38,7 @@ changeLanguage("en");
       }
 
       body {
-        background-color: var(--gray-10);
+        background-color: var(--white);
         color: var(--gray-80);
         font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono",
           "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace",
@@ -95,12 +96,12 @@ changeLanguage("en");
     <main class="center">
       <Image src={Logo} alt="404" width={800} />
       <h1>
-        <span class="text-4xl">404:</span>
-        <span class="text-4xl">{t("404.subtitle")}</span>
+        <span class="text-4xl text-red-600">404:</span>
+        <span class="text-4xl text-red-600">{t("404.subtitle")}</span>
       </h1>
       <br />
-      <pre class="mb-8">Path: {Astro.url.pathname}</pre>
-      <pre>{t("404.parrafo")}</pre>
+      <pre class="mb-8 text-white">Path: {Astro.url.pathname}</pre>
+      <pre class="text-white">{t("404.parrafo")}</pre>
     </main>
   </body>
 </html>

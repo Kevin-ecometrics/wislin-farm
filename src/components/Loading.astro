@@ -1,19 +1,14 @@
 ---
-import { Image } from "astro:assets";
 import { t } from "i18next";
-import Logo from "@assets/logo_loading.png";
+import Logo from "@components/icons/logo.astro";
 ---
 
 <div
   class="text-3xl loading flex justify-center items-center flex-col h-screen"
 >
-  <Image
-    class="animate-fade animate-delay-300 w-[1000px] mb-4"
-    src={Logo}
-    alt="loading-logo"
-  />
+  <Logo />
   <h1
-    class="animate-fade animate-delay-600 font-Roboto font-normal px-24 text-5xl text-wrap text-center"
+    class="animate-fade animate-delay-700 hidden md:block font-Roboto font-normal px-24 text-5xl text-wrap text-center"
   >
     {t("loading.title")}
   </h1>
@@ -33,7 +28,7 @@ import Logo from "@assets/logo_loading.png";
     if (pageContent) {
       pageContent.style.display = "block";
     }
-  }, 3000);
+  }, 4000);
 </script>
 
 <style>

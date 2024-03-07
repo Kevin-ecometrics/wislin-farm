@@ -56,6 +56,52 @@ const menuEng = [
     link: "/en/contact",
   },
 ];
+
+const DinamicLinks = [
+  {
+    name: "Queso Fresco",
+    link: "/productos/queso-fresco",
+  },
+  {
+    name: "Queso Panela",
+    link: "/productos/queso-panela",
+  },
+  {
+    name: "Queso Oaxaca",
+    link: "/productos/queso-oaxaca",
+  },
+  {
+    name: "Queso Seco",
+    link: "/productos/queso-seco",
+  },
+  {
+    name: "Chorizo",
+    link: "/productos/chorizo",
+  },
+];
+
+const DinamicLinksEng = [
+  {
+    name: "Fresh Cheese",
+    link: "/en/productos/queso-fresco",
+  },
+  {
+    name: "Panela Cheese",
+    link: "/en/productos/queso-panela",
+  },
+  {
+    name: "Oaxaca Cheese",
+    link: "/en/productos/queso-oaxaca",
+  },
+  {
+    name: "Dry Cheese",
+    link: "/en/productos/queso-seco",
+  },
+  {
+    name: "Chorizo",
+    link: "/en/productos/chorizo",
+  },
+];
 ---
 
 <StickyHeader
@@ -67,7 +113,7 @@ const menuEng = [
   <header class="lg:flex justify-between p-5 gap-5 mx-auto container w-4/5">
     <Astronav closeOnClick>
       <div class="flex w-full lg:w-auto justify-between">
-        <a>
+        <a href="/">
           <!-- Icono de la empresa -->
           <Image src={Logo} class="w-52" alt="Logo" />
         </a>
@@ -82,7 +128,8 @@ const menuEng = [
           class="flex flex-col md:items-center px-6 text-xl lg:flex-row lg:gap-5"
         >
           {
-            (Astro.url.pathname === "/" || Astro.url.pathname === "/productos"
+            (menuMex.some((item) => item.link === Astro.url.pathname) ||
+            DinamicLinks.some((linkObj) => Astro.url.pathname === linkObj.link)
               ? menuMex
               : menuEng
             ).map((item) => (
@@ -100,6 +147,9 @@ const menuEng = [
           <li class="relative">
             <Dropdown class="group">
               {
+                DinamicLinks.some(
+                  (linkObj) => Astro.url.pathname === linkObj.link
+                ) ||
                 menuMex.some((item) => item.link === Astro.url.pathname) ? (
                   <button
                     id="language-button"
@@ -112,7 +162,10 @@ const menuEng = [
                     />
                     Español
                   </button>
-                ) : menuEng.some((item) => item.link === Astro.url.pathname) ? (
+                ) : DinamicLinksEng.some(
+                    (linkObj) => Astro.url.pathname === linkObj.link
+                  ) ||
+                  menuEng.some((item) => item.link === Astro.url.pathname) ? (
                   <button
                     id="language-button"
                     class="rounded-xl border-red-500 border p-2 flex justify-center items-center gap-2"
@@ -133,13 +186,20 @@ const menuEng = [
                 >
                   <ul>
                     {
+                      DinamicLinks.some(
+                        (linkObj) => Astro.url.pathname === linkObj.link
+                      ) ||
                       menuMex.some(
                         (item) => item.link === Astro.url.pathname
                       ) ? (
                         <li>
                           <a
                             class="flex justify-start items-center gap-2"
-                            href="/en"
+                            href={
+                              Astro.url.pathname === "/"
+                                ? "/en"
+                                : "/en" + Astro.url.pathname
+                            }
                           >
                             <img
                               src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
@@ -149,13 +209,20 @@ const menuEng = [
                             {t("nav.Ingles")}
                           </a>
                         </li>
-                      ) : menuEng.some(
+                      ) : DinamicLinksEng.some(
+                          (linkObj) => Astro.url.pathname === linkObj.link
+                        ) ||
+                        menuEng.some(
                           (item) => item.link === Astro.url.pathname
                         ) ? (
                         <li>
                           <a
                             class="flex justify-start items-center gap-2"
-                            href="/"
+                            href={
+                              Astro.url.pathname === "/en"
+                                ? "/"
+                                : Astro.url.pathname.replace("/en", "")
+                            }
                           >
                             <img
                               src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg"

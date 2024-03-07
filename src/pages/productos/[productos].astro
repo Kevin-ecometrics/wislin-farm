@@ -1,0 +1,98 @@
+---
+import { changeLanguage } from "i18next";
+import Layout from "@layouts/Layout.astro";
+import Navbar from "@components/Navbar.astro";
+import { t } from "i18next";
+changeLanguage("es");
+
+export function getStaticPaths() {
+  return [
+    { params: { productos: "queso-fresco" } },
+    { params: { productos: "queso-panela" } },
+    { params: { productos: "queso-oaxaca" } },
+    { params: { productos: "queso-seco" } },
+    { params: { productos: "chorizo" } },
+  ];
+}
+const { productos } = Astro.params;
+
+const info = [
+  {
+    path: "/productos/queso-fresco",
+    img: "https://mygourmet.com.mx/wp-content/uploads/2022/04/Queso-artesanal-1024x681-1.jpg",
+    text: t("productos.fresco-text"),
+    title: t("productos.queso-fresco"),
+  },
+  {
+    path: "/productos/queso-panela",
+    img: "https://http2.mlstatic.com/D_NQ_NP_914463-MLM40395433798_012020-O.webp",
+    text: t("productos.panela-text"),
+    title: t("productos.queso-panela"),
+  },
+  {
+    path: "/productos/queso-oaxaca",
+    img: "https://consumaconciencia.com/wp-content/uploads/2018/07/Queso-Oaxaca-scaled.jpg",
+    text: t("productos.oaxaca-text"),
+    title: t("productos.queso-oaxaca"),
+  },
+  {
+    path: "/productos/queso-seco",
+    img: "https://www.market2224.com/cdn/shop/products/queso_seco_nica_1024x1024@2x.jpg?v=1630441314",
+    text: t("productos.seco-text"),
+    title: t("productos.queso-seco"),
+  },
+  {
+    path: "/productos/chorizo",
+    img: "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/b66f872a179dea7b8d6f717b99077bf9/Derivates/5649f5b2588a2556b3e4517d13ed7a17404c5e6e.jpg",
+    text: t("productos.chorizo-text"),
+    title: t("productos.chorizo"),
+  },
+];
+
+const currentInfo = info.find((i) => i.path === Astro.url.pathname);
+---
+
+<Layout title={`Wislin - ${productos}`}>
+  <main>
+    <div>
+      <Navbar />
+      <hr class="border border-gray-300" />
+      <div class="my-12 md:mb-48">
+        {
+          currentInfo && (
+            <>
+              <h1 class="text-4xl font-bold text-center mb-16 text-red-600 uppercase">
+                {currentInfo.title}
+              </h1>
+              <div class="flex items-center justify-center w-3/5 mx-auto flex-col md:flex-row gap-8">
+                <img
+                  src={currentInfo.img}
+                  class="
+            w-96 
+            rounded-2xl"
+                  alt=""
+                />
+                <p class="text-center whitespace-normal text-2xl">
+                  {currentInfo.text}
+                </p>
+              </div>
+            </>
+          )
+        }
+      </div>
+    </div>
+    <footer class="bg-white rounded-lg shadow">
+      <div class="w-full mx-auto p-4 md:py-8">
+        <hr
+          class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+        />
+        <span
+          class="block text-red-700 text-xl font-Roboto font-medium text-center dark:text-red-700"
+          >© 2024 <a href="https://wislinfarm.com/" class="hover:underline"
+            >WisliFarm</a
+          >. {t("footer.title")}.</span
+        >
+      </div>
+    </footer>
+  </main>
+</Layout>

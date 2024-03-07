@@ -25,6 +25,35 @@
     "title": "404",
     "subtitle": "Pagina no encontrada",
     "parrafo": "La pagina que buscas no existe o ha sido eliminada. Por favor regresa a la pagina de inicio."
+  },
+  "productos": {
+    "queso-fresco": "Queso fresco",
+    "fresco-link": "/productos/queso-fresco",
+    "fresco-info": "Este queso se elabora con leche entera pero es relativamente bajo en grasa y colesterol​ Este es un queso blanco esponjoso.",
+    "fresco-text": "El queso mexicano más básico es el queso fresco, del que se han derivado otros quesos como el panela, adobera, canasto y Oaxaca. Este queso se elabora con leche entera pero es relativamente bajo en grasa y colesterol​ Este es un queso blanco esponjoso, cuyos orígenes se remontan a Burgos, España y utiliza principalmente para espolvorearse sobre los platos. Este queso se hace en casi todas partes de México, con poca variación.    ",
+   
+    "queso-panela": "Queso panela",
+    "panela-link": "/productos/queso-panela",
+    "panela-info": "Queso suave y quebradizo, de forma cónica invertida, en piezas que van desde 0.5 hasta 2 Kg, aproximadamente. ",
+    "panela-text": "Queso suave y quebradizo, de forma cónica invertida, en piezas que van desde 0.5 hasta 2 Kg, aproximadamente, no se pueden hacer piezas más grandes debido a su consistencia, tan blanda, ya que se deformarían por su peso, no se derrite o funde cuando se calienta, se puede poner suave y cremoso, pero no perderá su forma. Es genuino y fresco ya que habita un ambiente acuoso similar al Queso mozzarella y se puede utilizar de la misma manera. También puede ser usado frito, a pesar de que mantiene su forma y no se derrite con mucha facilidad.    ",
+    
+    "queso-oaxaca": "Queso oaxaca",
+    "oaxaca-link": "/productos/queso-oaxaca",
+    "oaxaca-info": "Uno de los productos icónicos de la gastronomía mexicana; el queso Oaxaca o quesillo es un queso de pasta hilada.",
+    "oaxaca-text": "Uno de los productos icónicos de la gastronomía mexicana; el queso Oaxaca o quesillo es un queso de pasta hilada, proveniente del estado que le otorga su nombre. Junto con el queso Panela, es considerado uno de los mejores quesos de origen orgullosamente mexicano.    El queso Oaxaca tiene un sabor ácido, ligeramente cremoso, posee propiedades de fundición que lo hacen ideal para platos como quesadillas, queso fundido y para acompañar sopas y tacos.",
+    
+    "queso-seco": "Queso seco",
+    "seco-link": "/productos/queso-seco",
+    "seco-info": "Queso madurado o añejado. Tiene la característica de haber perdido todo su suero, ser más compacto, de sabor más salado y con mayor porcentaje de grasa.",
+    "seco-text": "Queso madurado o añejado. Tiene la característica de haber perdido todo su suero, ser más compacto, de sabor más salado y con mayor porcentaje de grasa.    ",
+    
+    "chorizo": "Chorizo",
+    "chorizo-link": "/productos/chorizo",
+    "chorizo-info": "El chorizo es un embutido que se elabora con carne de cerdo, pimentón y otras especias. Se puede consumir crudo, cocido, a la parrilla o frito.",
+    "chorizo-text": "El chorizo es un embutido que se elabora con carne de cerdo, pimentón y otras especias. Se puede consumir crudo, cocido, a la parrilla o frito.    ",
+
+    "button": "Ver más"
+
   }
 
 

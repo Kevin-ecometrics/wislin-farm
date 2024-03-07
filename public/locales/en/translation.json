@@ -25,6 +25,36 @@
     "title": "404",
     "subtitle": "Page not found",
     "parrafo": "The page you are looking for does not exist or has been moved. Please check the URL and try again."
+  },
+  "productos": {
+    "queso-fresco": "Fresh cheese",
+    "fresco-link": "/en/productos/queso-fresco",
+    "fresco-info": "Fresh cheese is a soft, white cheese that is made from cow's milk. It is a very popular cheese in Mexico and is used in a variety of dishes.",
+    "fresco-text": "The most basic Mexican cheese is queso fresco, from which other cheeses such as panela, adobera, canasto and Oaxaca have been derived. This cheese is made with whole milk but is relatively low in fat and cholesterol. This is a fluffy white cheese, whose origins date back to Burgos, Spain and is mainly used to sprinkle on dishes. This cheese is made almost everywhere in Mexico, with little variation.    ",
+
+    "queso-panela": "Panela cheese",
+    "panela-link": "/en/productos/queso-panela",
+    "panela-info": "Panela cheese is a white, fresh and smooth cheese that is made from cow's milk. It is a very popular cheese in Mexico and is used in a variety of dishes.",
+    "panela-text": "Soft and brittle cheese, with an inverted conical shape, in pieces ranging from 0.5 to 2 kg, approximately, larger pieces cannot be made due to its consistency, so soft, since they would be deformed due to their weight, it does not melt or melt When heated, it may become soft and creamy, but will not lose its shape. It is genuine and fresh as it inhabits a watery environment similar to Mozzarella Cheese and can be used in the same way. It can also be used fried, although it holds its shape and does not melt very easily.    ",
+
+
+    "queso-oaxaca": "Oaxaca cheese",
+    "oaxaca-link": "/en/productos/queso-oaxaca",
+    "oaxaca-info": "Oaxaca cheese is a white, fresh and smooth cheese that is made from cow's milk. It is a very popular cheese in Mexico and is used in a variety of dishes.",
+    "oaxaca-text": "    One of the iconic products of Mexican gastronomy; Oaxaca cheese or quesillo is a pasta filata cheese, from the state that gives it its name. Along with Panela cheese, it is considered one of the best cheeses of proudly Mexican origin.   Oaxaca cheese has an acidic, slightly creamy flavor, it has melting properties that make it ideal for dishes such as quesadillas, melted cheese and to accompany soups and tacos.",
+
+    "queso-seco": "Dry cheese",
+    "seco-link": "/en/productos/queso-seco",
+    "seco-info": "Dry cheese is a hard, white cheese that is made from cow's milk. It is a very popular cheese in Mexico and is used in a variety of dishes.",
+    "seco-text": "Matured or aged cheese. It has the characteristic of having lost all its whey, being more compact, saltier in flavor and with a higher percentage of fat.    ",
+
+    "chorizo": "Chorizo",
+    "chorizo-link": "/en/productos/chorizo",
+    "chorizo-info": "Chorizo is a type of sausage that is made from pork and beef. It is a very popular sausage in Mexico and is used in a variety of dishes.",
+    "chorizo-text": "Chorizo is a type of sausage that is made from pork and beef. It is a very popular sausage in Mexico and is used in a variety of dishes.",
+
+
+    "button": "See more"
   }
 
 
