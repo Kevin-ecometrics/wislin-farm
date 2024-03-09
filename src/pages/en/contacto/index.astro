@@ -1,0 +1,20 @@
+---
+import { changeLanguage } from "i18next";
+import Navbar from "@components/Navbar.astro";
+import Layout from "@layouts/Layout.astro";
+import Form from "@components/Form.astro";
+import Footer from "@components/Footer.astro";
+
+changeLanguage("en");
+---
+
+<Layout title="WislinFarm - Contacto">
+  <main>
+    <div>
+      <Navbar />
+      <hr class="border border-gray-300" />
+      <Form />
+      <Footer />
+    </div>
+  </main>
+</Layout>

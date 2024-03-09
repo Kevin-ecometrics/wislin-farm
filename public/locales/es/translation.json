@@ -4,7 +4,7 @@
     "nosotros": "Nosotros",
     "productos": "Productos",
     "contacto": "Contacto",
-    "servicios": "Servicios",
+    "recetas": "Recetas",
     "Español": "Español",
     "Ingles": "Ingles"
   },
@@ -54,7 +54,124 @@
 
     "button": "Ver más"
 
+  },
+  "nosotros": {
+  
+    "title": "Nosotros",
+    "subtitle": "WISLIN se caracteriza por ser un negocio familiar siendo la cuarta generación de productores de queso radicados en la ciudad de Tijuana; estamos enfocados en la producción y distribución de queso y chorizo de cerdo y de res.",
+    "parrafo": "Actualmente estamos incorporando nuevos productos a nuestra ruta de distribución, las cuales están enfocadas en proveer nuestros productos a tiendas y abarrotes en general, generando alianzas estratégicas con otros distribuidores para llegar a mayores sectores de la población.    "
+  },
+    "contacto": {
+      "title": "Contacto",
+      "informacion": "Información de contacto",
+      "formulario": "Formulario de contacto",
+      "correo": "Dirección de correo electrónico",
+      "nombre": "Nombre",
+      "telefono": "Numero de telefono",
+      "mensaje": "Mensaje",
+      "enviar": "Enviar",
+      "apellido": "Apellido"
+  },
+
+  "recetas": {
+    "title": "Recetas",
+    "descripcion": "Descripcion",
+    "ingredientes": "Ingredientes",
+    "Instrucciones" : "Instrucciones",
+    "panelatext": "Con queso panela - Receta    ",
+    "panelatitle": "Queso PANELA horneado    ",
+    "paneladate": "22 agosto, 2020    ",
+    "paneladescription": "Este queso panela horneado es una botana espectacular para poner en el centro de una mesa, se sirve tibio y funciona genial como botana. Este queso nos ayuda a quitarnos presión a la hora de ser anfitriones por qué se hace superrápido y es muy rico. La receta es muy sencilla, tan solo se coloca …    ",
+    "panelaurl": "/recetas/queso-panela-horneado",
+    "panelacontent1": {
+      "parrafo1": "Este queso panela horneado es una botana espectacular para poner en el centro de una mesa, se sirve tibio y funciona genial como botana.",
+      "parrafo2": "Este queso nos ayuda a quitarnos presión a la hora de ser anfitriones porque se hace superrápido y es muy rico.",
+      "parrafo3": "La receta es muy sencilla, tan solo se coloca el queso en un refractario, se le hacen unos cortes y se le agregan unos ingredientes que le dan un sabor delicioso.",
+      "parrafo4": "Una vez que sazonamos bien el queso solo hay que llevarlo a un horno hasta que el queso se derrita ligeramente. Como es un queso panela nunca se va a derretir por completo, pero si tomara una textura deliciosa y un poco más fácil de untar en un pedazo de pan o galleta.      ",
+      "parrafo5": "Cuando lo hago suelo ponerlo al centro de la mesa con un cuchillo a un lado para que cada quien se corte un trozo y lo disfrute con un poco de pan.      ",
+      "parrafo6": "Si les gusta la idea piénsela como una base para hacer cuantas variaciones se les antoje. Cómo agregarle jitomates cherry mientras se cocina, terminarlo con hierbas de olor frescas como albahaca o el perejil, o por qué no ponerle un poco de estos pimientos.      "
+    },
+    "panelacontent2":{
+      "parrafo1": "500 gr queso panela      ",
+      "parrafo2": "1 diente de ajo      ",
+      "parrafo3": "1 cucharadita de orégano seco      ",
+      "parrafo4": "aceite de oliva a gusto      "
+    },
+    "panelacontent3":{
+      "parrafo1": "Poner el queso en un recipiente apto para el horno.      :",
+      "parrafo2": "Ponerle encima el ajo el cual pasaremos primero por un exprimidor de ajo y el orégano.      ",
+      "parrafo3": "Lo llevamos a un horno a 200 grados centígrados por 10 minutos.      ",
+      "parrafo4": "Le ponemos un poco de aceite de oliva antes de servirlo.      "
+    },
+    "oaxacatext": "Con queso oaxaca - Receta    ",
+    "oaxacatitle": "Cuadritos de queso OAXACA empanizados",
+    "oaxacadate": "21 agosto - 2020    ",
+    "oaxacadescription": "INGREDIENTES 500 g de queso Oaxaca Wislin Farm 100 g de Harina de trigo 100 g de miga de Pan 3 cucharadas de orégano seco 4 huevos Mezcla de sal gruesa y pimienta MODO DE PREPARACIÓN La mayoría de las veces pensamos que el queso sólo se puede derretir, rallar o fundir, pero una de …    ",
+    "oaxacaurl": "/recetas/cuadritos-queso-oaxaca-empanizados",
+    "oaxacacontent2":{
+      "parrafo1": "500 g de queso Oaxaca Wislin Farm      ",
+      "parrafo2": "100 g de Harina de trigo      ",
+      "parrafo3": "100 g de miga de Pan      ",
+      "parrafo4": "3 cucharadas de orégano seco      ",
+      "parrafo5": "4 huevos      ",
+      "parrafo6": "Mezcla de sal gruesa y pimienta      "
+    },
+    "oaxacacontent3":{
+      "parrafo1": "La mayoría de las veces pensamos que el queso sólo se puede derretir, rallar o fundir, pero una de las mejores formas para prepararlo es empanizado.      ",
+      "parrafo2": "En esta ocasión amiga presentamos esta botana que puede gustar tanto a chicos como grandes, y aunque no es complicado prepararla, recomendamos no invitar a tus hijos a cocinar contigo pues se utiliza aceite caliente que podría causar accidentes.      ",
+      "parrafo3": "Lo primero que tienes que hacer es cortar en cubos el queso Oaxaca La Villita y preparar todos los ingredientes en platos separados, en uno revolver la harina con un poco de sal y pimienta, en otro los huevos revueltos y en un último miga de pan y orégano seco.      ",
+      "parrafo4": "Toma cubo por cubo y empanízalo completamente en la harina, luego sumérgelos en el huevo y al final empanízalos de nuevo pero ahora con la miga de pan.      ",
+      "parrafo5": "Para finalizar, deja calentar aceite en un sartén hondo y cuando esté hirviendo, fríe los cubos de queso. Deja escurrir en una servilleta y sirve.       "
+    },
+    "verdurastext": "Con queso panela - Receta    ",
+    "verdurastitle": "Verduras rellenas de queso panela    ",
+    "verdurasdate": "21 agosto - 2020    ",
+    "verdurasdescription": "Ingredientes para cuatro porciones: 4 cdas de aceite de oliva 3/4 tz de arroz salvaje (previamente remojado por tres horas) 2 cdas de cebolla picada 1 diente de ajo 2 tz de agua 1/2 cdta de sal 4 piezas de pimienta negra entera 400 g de queso panela bajo en grasa cortado en cuadritos 4 …    ",
+    "verdurasurl": "/recetas/verduras-rellenas-queso-panela",
+    "verdurascontent2":{
+      "parrafo1": "4 cdas de aceite de oliva      ",
+      "parrafo2": "3/4 tz de arroz salvaje (previamente remojado por tres horas)      ",
+      "parrafo3": "2 cdas de cebolla picada      ",
+      "parrafo4": "1 diente de ajo      ",
+      "parrafo5": "2 tz de agua      ",
+      "parrafo6": "1/2 cdta de sal      ",
+      "parrafo7": "4 piezas de pimienta negra entera      ",
+      "parrafo8": "400 g de queso panela bajo en grasa cortado en cuadritos      ",
+      "parrafo9": "4 calabazas cocidas partidas a los largo por la mitad y sin centro      ",
+      "parrafo10": "4 jitomates sin semillas partidos por la mitad y calentados tres minutos en el microondas      ",
+      "parrafo11": "4 pimientos amarillos chicos sin semillas partidos por la mitad y calentados un minutos en el microondas      "
+    },
+    "verdurascontent3":{
+      "parrafo1": "Calentar el aceite y sofreír el arroz durante 5 minutos      ",
+      "parrafo2": "Añade la cebolla y el ajo, y deja sofreír dos minutos más      ",
+      "parrafo3": "Agrega la sal, pimienta y agua; tápalo y deja que se consuma el agua      ",
+      "parrafo4": "Mézclalo con el queso panela y rellena las verduras. Mételas medio minuto al microondas      ",
+      "parrafo5": "Sirve (pueden estar frías o calientes)      "
+    },
+    "ensaladatext": "Con queso fresco - Receta    ",
+    "ensaladatitle": "Ensalada de lentejas y queso fresco wislin farm    ",
+    "ensaladadate": "21 agosto - 2020    ",
+    "ensaladadescription": "Esta es una de las recetas con queso fresco que te gustará por lo saludable que es, por contener pocas calorías y por ser muy fácil y rápida de preparar. Es diferente a las que sueles tomar, ¿verdad? Ingredientes: Lentejas cocidas en bote de conservaQueso Fresco Wislin FarmAceitunas negras (o verdes)Aceite de oliva virgenSal al gusto …    ",
+    "ensaladaurl": "/recetas/ensalada-lentejas-y-queso-fresco",
+    "ensaladacontent1":{
+      "parrafo1": "Esta es una de las recetas con queso fresco que te gustará por lo saludable que es, por contener pocas calorías y por ser muy fácil y rápida de preparar. Es diferente a las que sueles tomar, ¿verdad?      "
+    },
+    "ensaladacontent2":{
+      "parrafo1": "Lentejas cocidas en bote de conserva      ",
+      "parrafo2": "Queso Fresco Wislin Farm      ",
+      "parrafo3": "Aceitunas negras (o verdes)      ",
+      "parrafo4": "Aceite de oliva virgen      ",
+      "parrafo5": "Sal al gusto      "
+    },
+    "ensaladacontent3":{
+      "parrafo1": "Lava las lentejas en un colador y deja que escurra el agua.      ",
+      "parrafo2": "Vuélcalas en el recipiente donde se vayan a servir (recomendamos un bol para mezclar más cómodamente)      ",
+      "parrafo3": "Añade el resto de ingredientes. Se pueden añadir tantos como quieras y hacer más combinaciones. Esa es una de las ventajas de esta versátil receta 😉 Con pimientos rojos naturales asados y queso Wislin Farm está también deliciosa.      ",
+      "parrafo4": "Guárdala en el frigorífico hasta que vayas a servirla.      "
+    },
+    "button": "Leer más"
   }
 
+  
 
 }

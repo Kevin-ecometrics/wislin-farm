@@ -1,0 +1,81 @@
+---
+import { t } from "i18next";
+const Images = [
+  "https://wislinfarm.com/wp-content/uploads/2020/08/Cuadritos_de_queso_Oaxaca_rebozados_800X559_137548892.jpg",
+  "https://wislinfarm.com/wp-content/uploads/2020/08/q3-800x559.jpg",
+  "https://wislinfarm.com/wp-content/uploads/2020/08/verdurasQueso.png",
+  "https://wislinfarm.com/wp-content/uploads/2020/08/qph2.jpg",
+];
+
+const Recipes = [
+  {
+    text: t("recetas.panelatext"),
+    image: Images[3],
+    title: t("recetas.panelatitle"),
+    date: t("recetas.paneladate"),
+    description: t("recetas.paneladescription"),
+    url: t("recetas.panelaurl"),
+  },
+  {
+    text: t("recetas.oaxacatext"),
+    image: Images[0],
+    title: t("recetas.oaxacatitle"),
+    date: t("recetas.oaxacadate"),
+    description: t("recetas.oaxacadescription"),
+    url: t("recetas.oaxacaurl"),
+  },
+  {
+    text: t("recetas.verdurastext"),
+    image: Images[2],
+    title: t("recetas.verdurastitle"),
+    date: t("recetas.verdurasdate"),
+    description: t("recetas.verdurasdescription"),
+    url: t("recetas.verdurasurl"),
+  },
+  {
+    text: t("recetas.ensaladatext"),
+    image: Images[1],
+    title: t("recetas.ensaladatitle"),
+    date: t("recetas.ensaladadate"),
+    description: t("recetas.ensaladadescription"),
+    url: t("recetas.ensaladaurl"),
+  },
+];
+---
+
+<main class="w-[80%] mx-auto px-8 py-24">
+  <h1
+    class="text-red-600 font-Roboto font-bold text-center text-5xl mb-12 uppercase"
+  >
+    {t("recetas.title")}
+  </h1>
+  <div class="flex flex-col md:flex-row md:flex-wrap md:justify-around gap-4">
+    {
+      Recipes.map((recipe) => (
+        <div class="rounded-3xl px-2 md:w-[400px] md:h-[600px] flex flex-col items-center bg-white shadow-lg transform transition-transform duration-500 hover:scale-105 hover:rotate-3 shadow-red-400">
+          <img
+            src={recipe.image}
+            alt={recipe.title}
+            class="w-full h-[200px] object-cover rounded-t-3xl"
+          />
+          <h1 class="text-red-600 mt-4 font-Roboto font-medium">
+            {recipe.text}
+          </h1>
+          <h2 class="text-xl text-center font-bold">{recipe.title}</h2>
+          <p class="text-sm text-gray-500 font-Roboto font-medium">
+            {recipe.date}
+          </p>
+          <p class="text-base text-gray-700 mt-2 px-4 font-Roboto font-medium">
+            {recipe.description}
+          </p>
+          <a
+            href={recipe.url}
+            class="mt-auto mb-4 px-16 py-2 bg-red-600 text-white rounded-full font-Roboto font-bold hover:bg-red-700"
+          >
+            {t("recetas.button")}
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</main>

@@ -4,7 +4,7 @@
     "nosotros": "About us",
     "productos": "Products",
     "contacto": "Contact",
-    "servicios": "Services",
+    "recetas": "Recipes",
     "Español": "Spanish",
     "Ingles": "English"
   },
@@ -55,6 +55,120 @@
 
 
     "button": "See more"
+  },
+  "nosotros": { 
+    "title": "About us",
+    "subtitle": "WISLIN is characterized by being a family business, being the fourth generation of cheese producers based in the city of Tijuana; We are focused on the production and distribution of pork and beef cheese and chorizo.    ",
+    "parrafo": "We are currently incorporating new products into our distribution route, which are focused on providing our products to stores and groceries in general, generating strategic alliances with other distributors to reach larger sectors of the population.    "
+  },
+  "contacto": {
+    "title": "Contact us",
+    "informacion": "Contact information",
+    "formulario": "Contact form",
+    "correo": "Email",
+    "nombre": "Name",
+    "telefono": "Phone number",
+    "mensaje": "Message",
+    "enviar": "Send",
+    "apellido": "Last name"
+},
+"recetas": {
+    "title": "Recipes",
+    "descripcion": "Description",
+    "ingredientes": "Ingredients",
+    "instrucciones" : "Instructions",
+    "panelatext": "With panela cheese - Recipe",
+    "panelatitle": "Baked PANELA cheese",
+    "paneladate": "August 22, 2020",
+    "paneladescription": "This baked panela cheese is a spectacular snack to put in the center of a table, it is served warm and works great as a snack. This cheese helps us take the pressure off when it comes to being hosts because it is made super fast and It is very delicious. The recipe is very simple, you just place it...",
+    "panelaurl": "/en/recetas/queso-panela-horneado",
+    "panelacontent1": {
+      "parrafo1": "This baked panela cheese is a spectacular snack to put in the center of a table, it is served warm and works great as a snack.",
+      "parrafo2": "This cheese helps us take the pressure off when it comes to being hosts because it is made super fast and is very delicious.",
+      "parrafo3": "The recipe is very simple, you just place the cheese in a refractory, make some cuts and add some ingredients that give it a delicious flavor.",
+      "parrafo4": "Once we season the cheese well, we just have to put it in an oven until the cheese melts slightly. As it is a panela cheese, it will never melt completely, but it will take on a delicious texture and a little more easy to spread on a piece of bread or cracker.",
+      "parrafo5": "When I make it I usually put it in the center of the table with a knife on one side so that everyone can cut a piece and enjoy it with a little bread.",
+      "parrafo6": "If you like the idea, think of it as a base to make as many variations as you like. How to add cherry tomatoes while it is cooking, finish it with fresh herbs like basil or parsley, or why not add a little these peppers."
+    },
+    "panelacontent2":{
+      "parrafo1": "500 gr panela cheese",
+      "parrafo2": "1 clove of garlic",
+      "parrafo3": "1 teaspoon dried oregano",
+      "parrafo4": "olive oil to taste"
+    },
+    "panelacontent3":{
+      "parrafo1": "Put the cheese in a container suitable for the oven. :",
+      "parrafo2": "Put the garlic on top, which we will first pass through a garlic press and the oregano.",
+      "parrafo3": "We put it in an oven at 200 degrees Celsius for 10 minutes.",
+      "parrafo4": "We add a little olive oil before serving it."
+    },
+    "oaxacatext": "With Oaxaca cheese - Recipe",
+    "oaxacatitle": "Breaded OAXACA cheese squares",
+    "oaxacadate": "August 21 - 2020",
+    "oaxacadescription": "INGREDIENTS 500 g of Oaxaca Wislin Farm cheese 100 g of wheat flour 100 g of bread crumbs 3 tablespoons of dried oregano 4 eggs Mix of coarse salt and pepper PREPARATION METHOD Most of the time we think that cheese It can only be melted, grated or melted, but one of... ",
+    "oaxacaurl": "/en/recetas/cuadritos-queso-oaxaca-empanizados",
+    "oaxacacontent2":{
+      "parrafo1": "500 g of Oaxaca Wislin Farm cheese",
+      "parrafo2": "100 g of wheat flour",
+      "parrafo3": "100 g of breadcrumbs",
+      "parrafo4": "3 tablespoons of dried oregano",
+      "parrafo5": "4 eggs",
+      "parrafo6": "Mixture of coarse salt and pepper"
+    },
+    "oaxacacontent3":{
+      "parrafo1": "Most of the time we think that cheese can only be melted, grated or melted, but one of the best ways to prepare it is breaded. :",
+      "parrafo2": "On this occasion, friend, we present this snack that both children and adults can like, and although it is not complicated to prepare, we recommend not inviting your children to cook with you because hot oil is used which could cause accidents.",
+      "parrafo3": "The first thing you have to do is cut the Oaxaca La Villita cheese into cubes and prepare all the ingredients in separate plates, in one stir the flour with a little salt and pepper, in another the scrambled eggs and in one last crumb of bread and dried oregano.",
+      "parrafo4": "Take cube by cube and bread them completely in the flour, then dip them in the egg and at the end bread them again but now with the breadcrumbs.",
+      "parrafo5": "To finish, heat the oil in a deep frying pan and when it is boiling, fry the cheese cubes. Let them drain on a napkin and serve."
+    },
+    "verdurastext": "With panela cheese - Recipe",
+    "verdurastitle": "Vegetables stuffed with panela cheese",
+    "verdurasdate": "August 21 - 2020",
+    "verdurasdescription": "Ingredients for four servings: 4 tablespoons of olive oil 3/4 cup of wild rice (previously soaked for three hours) 2 tablespoons of chopped onion 1 clove of garlic 2 cups of water 1/2 teaspoon of salt 4 pieces of whole black pepper 400 g of low-fat panela cheese cut into squares 4 …",
+    "verdurasurl": "/en/recetas/verduras-rellenas-queso-panela",
+    "verdurascontent2":{
+      "parrafo 1": "4 tablespoons of olive oil",
+      "parrafo2": "3/4 cup of wild rice (previously soaked for three hours)",
+      "parrafo3": "2 tablespoons of chopped onion",
+      "parrafo4": "1 clove of garlic",
+      "parrafo5": "2 tz of water",
+      "parrafo6": "1/2 tsp salt",
+      "parrafo7": "4 pieces of whole black pepper",
+      "parrafo8": "400 g of low-fat panela cheese cut into squares",
+      "parrafo9": "4 cooked pumpkins cut lengthwise in half and without center",
+      "parrafo10": "4 seedless tomatoes, cut in half and heated for three minutes in the microwave",
+      "parrafo11": "4 small yellow peppers, seeded, cut in half and heated for a minute in the microwave"
+    },
+    "verdurascontent3":{
+      "parrafo1": "Heat the oil and fry the rice for 5 minutes",
+      "parrafo2": "Add the onion and garlic, and fry for two more minutes",
+      "parrafo3": "Add the salt, pepper and water; cover it and let the water drain away",
+      "parrafo4": "Mix it with the panela cheese and stuff the vegetables. Put them in the microwave for half a minute,",
+      "parrafo5": "Serves (can be hot or cold)"
+    },
+    "ensaladatext": "With fresh cheese - Recipe",
+    "ensaladatitle": "Wislin farm lentil and fresh cheese salad",
+    "ensaladadate": "August 21 - 2020",
+    "ensaladadescription": "This is one of the recipes with fresh cheese that you will like because it is healthy, contains few calories and is very easy and quick to prepare. It is different from the ones you usually eat, right? Ingredients: Cooked lentils in a canning jarWislin Farm Fresh CheeseBlack (or green) olivesVirgin olive oilSalt to taste...",
+    "ensaladaurl": "/en/recetas/ensalada-lentejas-y-queso-fresco",
+    "ensaladacontent1":{
+      "parrafo1": "This is one of the recipes with fresh cheese that you will like because it is healthy, contains few calories, and is very easy and quick to prepare. It is different from the ones you usually eat, right?"
+    },
+    "ensaladacontent2":{
+      "parrafo1": "Cooked lentils in a canning jar",
+      "parrafo2": "Wislin Farm Fresh Cheese",
+      "parrafo3": "Black (or green) olives",
+      "parrafo4": "Virgin olive oil",
+      "parrafo5": "Salt to taste"
+    },
+    "ensaladacontent3":{
+      "parrafo1": "Wash the lentils in a colander and let the water drain.",
+      "parrafo2": "Pour them into the container where they are going to be served (we recommend a bowl to mix more comfortably)",
+      "parrafo3": "Add the rest of the ingredients. You can add as many as you want and make more combinations. That is one of the advantages of this versatile recipe 😉 With natural roasted red peppers and Wislin Farm cheese it is also delicious.",
+      "parrafo4": "Keep it in the refrigerator until you are ready to serve it."
+    },
+    "button": "Read more"
   }
 
 

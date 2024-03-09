@@ -1,0 +1,30 @@
+---
+import { changeLanguage } from "i18next";
+import Navbar from "@components/Navbar.astro";
+import Layout from "@layouts/Layout.astro";
+import Footer from "@components/Footer.astro";
+import RecetasContent from "@components/RecetasContent.astro";
+
+changeLanguage("es");
+
+export function getStaticPaths() {
+    return [
+        { params: { recetas: "queso-panela-horneado" } },
+        { params: { recetas: "cuadritos-queso-oaxaca-empanizados" } },
+        { params: { recetas: "verduras-rellenas-queso-panela" } },
+        { params: { recetas: "ensalada-lentejas-y-queso-fresco" } },
+    ];
+}
+const { recetas } = Astro.params;
+---
+
+<Layout title={`WislinFarm - ${recetas}`}>
+  <main>
+    <div>
+      <Navbar />
+      <hr class="border border-gray-300" />
+      <RecetasContent />
+      <Footer />
+    </div>
+  </main>
+</Layout>
