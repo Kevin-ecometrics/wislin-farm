@@ -1,19 +1,19 @@
 ---
 import { changeLanguage } from "i18next";
-import Navbar from "@components/Navbar.astro";
+import Navbar from "@components/NavbarEN.astro";
 import Layout from "@layouts/Layout.astro";
 import Footer from "@components/Footer.astro";
-import RecetasContent from "@components/RecetasContent.astro";
+import RecetasContentEn from "@components/RecetasContentEN.astro";
 
 changeLanguage("en");
 
 export function getStaticPaths() {
-    return [
-        { params: { recetas: "queso-panela-horneado" } },
-        { params: { recetas: "cuadritos-queso-oaxaca-empanizados" } },
-        { params: { recetas: "verduras-rellenas-queso-panela" } },
-        { params: { recetas: "ensalada-lentejas-y-queso-fresco" } },
-    ];
+  return [
+    { params: { recetas: "queso-panela-horneado" } },
+    { params: { recetas: "cuadritos-queso-oaxaca-empanizados" } },
+    { params: { recetas: "verduras-rellenas-queso-panela" } },
+    { params: { recetas: "ensalada-lentejas-y-queso-fresco" } },
+  ];
 }
 const { recetas } = Astro.params;
 ---
@@ -23,7 +23,7 @@ const { recetas } = Astro.params;
     <div>
       <Navbar />
       <hr class="border border-gray-300" />
-      <RecetasContent />
+      <RecetasContentEn recetas={recetas} />
       <Footer />
     </div>
   </main>

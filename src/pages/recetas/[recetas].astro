@@ -8,12 +8,12 @@ import RecetasContent from "@components/RecetasContent.astro";
 changeLanguage("es");
 
 export function getStaticPaths() {
-    return [
-        { params: { recetas: "queso-panela-horneado" } },
-        { params: { recetas: "cuadritos-queso-oaxaca-empanizados" } },
-        { params: { recetas: "verduras-rellenas-queso-panela" } },
-        { params: { recetas: "ensalada-lentejas-y-queso-fresco" } },
-    ];
+  return [
+    { params: { recetas: "queso-panela-horneado" } },
+    { params: { recetas: "cuadritos-queso-oaxaca-empanizados" } },
+    { params: { recetas: "verduras-rellenas-queso-panela" } },
+    { params: { recetas: "ensalada-lentejas-y-queso-fresco" } },
+  ];
 }
 const { recetas } = Astro.params;
 ---
@@ -23,7 +23,7 @@ const { recetas } = Astro.params;
     <div>
       <Navbar />
       <hr class="border border-gray-300" />
-      <RecetasContent />
+      <RecetasContent recetas={recetas} />
       <Footer />
     </div>
   </main>
