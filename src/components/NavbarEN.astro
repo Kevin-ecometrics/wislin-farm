@@ -109,23 +109,45 @@ const DinamicLinks = [
               </li>
             ))
           }
-          <li>
-            <a
-              href={Astro.url.pathname.startsWith("/en")
-                ? Astro.url.pathname.slice(3)
-                : Astro.url.pathname}
-              class="flex justify-start items-center gap-2 border-red-500 border p-2 rounded-lg"
-            >
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg"
-                alt="Mexican Flag"
-                class="w-12 h-6"
-              />
-              Español
-            </a>
+          <li class="relative">
+            <Dropdown class="group">
+              <button
+                class="flex justify-start items-center gap-2 border-red-500 border p-2 rounded-lg"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
+                  alt="US Flag"
+                  class="w-12 h-6"
+                />
+                English
+              </button>
+              <DropdownItems>
+                <div
+                  class="lg:absolute bg-white hover:bg-slate-100 top-14 w-40 border shadow rounded p-2"
+                >
+                  <ul>
+                    <li>
+                      <a
+                        href={Astro.url.pathname.startsWith("/en")
+                          ? Astro.url.pathname.slice(3)
+                          : Astro.url.pathname}
+                        class="flex justify-start items-center gap-2 p-2 rounded-lg"
+                      >
+                        <img
+                          src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg"
+                          alt="Mexican Flag"
+                          class="w-12 h-6"
+                        />
+                        Español
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </DropdownItems>
+            </Dropdown>
           </li>
         </ul>
       </MenuItems>
     </Astronav>
-  </header>
-</StickyHeader>
+  </header></StickyHeader
+>

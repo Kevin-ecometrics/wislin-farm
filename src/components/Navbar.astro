@@ -1,5 +1,12 @@
 ---
-import { Astronav, MenuItems, MenuIcon, StickyHeader } from "astro-navbar";
+import {
+  Astronav,
+  MenuItems,
+  MenuIcon,
+  StickyHeader,
+  Dropdown,
+  DropdownItems,
+} from "astro-navbar";
 import { Image } from "astro:assets";
 import { t } from "i18next";
 import Logo from "@assets/logo_loading.png";
@@ -24,45 +31,6 @@ const menuMex = [
   {
     name: "Contacto",
     link: "/contacto",
-  },
-];
-
-const DinamicLinks = [
-  {
-    name: "Queso Fresco",
-    link: "/productos/queso-fresco",
-  },
-  {
-    name: "Queso Panela",
-    link: "/productos/queso-panela",
-  },
-  {
-    name: "Queso Oaxaca",
-    link: "/productos/queso-oaxaca",
-  },
-  {
-    name: "Queso Seco",
-    link: "/productos/queso-seco",
-  },
-  {
-    name: "Chorizo",
-    link: "/productos/chorizo",
-  },
-  {
-    name: "Queso Panela Horneado",
-    link: "/recetas/queso-panela-horneado",
-  },
-  {
-    name: "Cuadritos de Queso Oaxaca Empanizados",
-    link: "/recetas/cuadritos-queso-oaxaca-empanizados",
-  },
-  {
-    name: "Verduras Rellenas de Queso Panela",
-    link: "/recetas/verduras-rellenas-queso-panela",
-  },
-  {
-    name: "Ensalada de Lentejas y Queso Fresco",
-    link: "/recetas/ensalada-lentejas-y-queso-fresco",
   },
 ];
 ---
@@ -102,20 +70,42 @@ const DinamicLinks = [
               </li>
             ))
           }
-          <li>
-            <a
-              href={Astro.url.pathname.startsWith("/en")
-                ? Astro.url.pathname
-                : "/en" + Astro.url.pathname}
-              class="flex justify-start items-center gap-2 border-red-500 border p-2 rounded-lg"
-            >
-              <img
-                src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
-                alt="US Flag"
-                class="w-12 h-6"
-              />
-              English
-            </a>
+          <li class="relative">
+            <Dropdown class="group">
+              <button
+                class="flex justify-start items-center gap-2 border-red-500 border p-2 rounded-lg"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg"
+                  alt="Mexican Flag"
+                  class="w-12 h-6"
+                />
+                Español
+              </button>
+              <DropdownItems>
+                <div
+                  class="lg:absolute bg-white hover:bg-slate-100 top-14 w-36 border shadow rounded p-2"
+                >
+                  <ul>
+                    <li>
+                      <a
+                        href={Astro.url.pathname.startsWith("/en")
+                          ? Astro.url.pathname
+                          : "/en" + Astro.url.pathname}
+                        class="flex justify-start items-center gap-2 p-2 rounded-lg"
+                      >
+                        <img
+                          src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
+                          alt="US Flag"
+                          class="w-12 h-6"
+                        />
+                        English
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </DropdownItems>
+            </Dropdown>
           </li>
         </ul>
       </MenuItems>
