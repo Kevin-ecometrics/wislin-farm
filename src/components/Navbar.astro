@@ -12,10 +12,10 @@ import { t } from "i18next";
 import Logo from "@assets/logo_loading.png";
 
 const menuMex = [
-  {
-    name: "Inicio",
-    link: "/",
-  },
+  // {
+  //   name: "Inicio",
+  //   link: "/",
+  // },
   {
     name: "Productos",
     link: "/productos",
@@ -41,7 +41,7 @@ const menuMex = [
   defaultClass="py-5 border-transparent"
   activeClass="py-2 bg-white/80 border-gray-200 backdrop-blur-lg"
 >
-  <header class="lg:flex justify-between p-5 gap-5 mx-auto container w-4/5">
+  <header class="lg:flex justify-between p-5 gap-5 mx-auto container">
     <Astronav closeOnClick>
       <div class="flex w-full lg:w-auto justify-between">
         <a href="/">
@@ -56,7 +56,7 @@ const menuMex = [
       <MenuItems class="hidden lg:flex">
         <!-- lista de los elementos del navbar -->
         <ul
-          class="flex flex-col md:items-center px-6 text-xl lg:flex-row lg:gap-5"
+          class="flex flex-col md:items-center px-6 text-xl lg:flex-row lg:gap-5 space-y-4 md:space-y-0"
         >
           {
             menuMex.map((item) => (
@@ -70,6 +70,14 @@ const menuMex = [
               </li>
             ))
           }
+          <li>
+            <a
+              class="border border-blue-400 px-2 sm:px-4 py-1 sm:py-2 text-xs sm:text-base rounded-lg text-blue-400 hover:bg-blue-400 hover:text-white"
+              href="/system/venta"
+            >
+              Iniciar Sesión
+            </a>
+          </li>
           <li class="relative">
             <Dropdown class="group">
               <button

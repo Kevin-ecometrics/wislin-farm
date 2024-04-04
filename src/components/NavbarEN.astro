@@ -12,10 +12,10 @@ import { t } from "i18next";
 import Logo from "@assets/logo_loading.png";
 
 const menuMex = [
-  {
-    name: "Inicio",
-    link: "/en/",
-  },
+  // {
+  //   name: "Inicio",
+  //   link: "/en/",
+  // },
   {
     name: "Productos",
     link: "/en/productos",
@@ -33,45 +33,6 @@ const menuMex = [
     link: "/en/contacto",
   },
 ];
-
-const DinamicLinks = [
-  {
-    name: "Queso Fresco",
-    link: "/en/productos/queso-fresco",
-  },
-  {
-    name: "Queso Panela",
-    link: "/en/productos/queso-panela",
-  },
-  {
-    name: "Queso Oaxaca",
-    link: "/en/productos/queso-oaxaca",
-  },
-  {
-    name: "Queso Seco",
-    link: "/en/productos/queso-seco",
-  },
-  {
-    name: "Chorizo",
-    link: "/en/productos/chorizo",
-  },
-  {
-    name: "Queso Panela Horneado",
-    link: "/en/recetas/queso-panela-horneado",
-  },
-  {
-    name: "Cuadritos de Queso Oaxaca Empanizados",
-    link: "/en/recetas/cuadritos-queso-oaxaca-empanizados",
-  },
-  {
-    name: "Verduras Rellenas de Queso Panela",
-    link: "/en/recetas/verduras-rellenas-queso-panela",
-  },
-  {
-    name: "Ensalada de Lentejas y Queso Fresco",
-    link: "/en/recetas/ensalada-lentejas-y-queso-fresco",
-  },
-];
 ---
 
 <StickyHeader
@@ -80,7 +41,7 @@ const DinamicLinks = [
   defaultClass="py-5 border-transparent"
   activeClass="py-2 bg-white/80 border-gray-200 backdrop-blur-lg"
 >
-  <header class="lg:flex justify-between p-5 gap-5 mx-auto container w-4/5">
+  <header class="lg:flex justify-between p-5 gap-5 mx-auto container">
     <Astronav closeOnClick>
       <div class="flex w-full lg:w-auto justify-between">
         <a href="/en/">
@@ -95,7 +56,7 @@ const DinamicLinks = [
       <MenuItems class="hidden lg:flex">
         <!-- lista de los elementos del navbar -->
         <ul
-          class="flex flex-col md:items-center px-6 text-xl lg:flex-row lg:gap-5"
+          class="flex flex-col md:items-center px-6 text-xl lg:flex-row lg:gap-5 space-y-4 md:space-y-0"
         >
           {
             menuMex.map((item) => (
@@ -109,6 +70,14 @@ const DinamicLinks = [
               </li>
             ))
           }
+          <li>
+            <a
+              class="border border-blue-400 px-4 py-2 rounded-lg text-blue-400 hover:bg-blue-400 hover:text-white"
+              href="/system/venta"
+            >
+              Log in
+            </a>
+          </li>
           <li class="relative">
             <Dropdown class="group">
               <button
