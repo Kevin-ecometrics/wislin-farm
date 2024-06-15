@@ -1,4 +1,13 @@
 ---
+import "@fontsource/poppins/100.css";
+import "@fontsource/poppins/200.css";
+import "@fontsource/poppins/300.css";
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
+import "@fontsource/poppins/800.css";
+import "@fontsource/poppins/900.css";
 interface Props {
   title: string;
 }
@@ -21,39 +30,24 @@ const { title } = Astro.props;
   </body>
 </html>
 <style is:global>
-  :root {
-    --color-background-light: 255, 255, 255; /* blanco */
-    --color-text-light: 19, 21, 26; /* casi negro */
-    --color-background-dark: 19, 21, 26; /* casi negro */
-    --color-text-dark: 255, 255, 255; /* blanco */
+  @font-face {
+    font-family: "Aligarh";
+    src: url("/fonts/AligarhDEMO-Light-BF651b7aa8e433c.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
 
-    /* Establece los colores iniciales para el modo claro */
-    --color-background: var(--color-background-light);
-    --color-text: var(--color-text-light);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Aligarh", sans-serif;
   }
-  .dark {
-    /* Establece los colores para el modo oscuro */
-    --color-background: var(--color-background-dark);
-    --color-text: var(--color-text-dark);
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background-color: rgb(var(--color-background));
-    background-size: 224px;
-  }
+
   body {
-    color: rgb(var(--color-text));
-    background-color: rgb(var(--color-background));
-  }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
+    font-family: "Poppins", sans-serif;
   }
 </style>

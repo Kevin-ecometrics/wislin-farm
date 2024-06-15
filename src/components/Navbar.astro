@@ -9,7 +9,7 @@ import {
 } from "astro-navbar";
 import { Image } from "astro:assets";
 import { t } from "i18next";
-import Logo from "@assets/logo_loading.png";
+import Logo from "@assets/Logo Wislin-03.png";
 
 const menuMex = [
   // {
@@ -18,19 +18,19 @@ const menuMex = [
   // },
   {
     name: "Productos",
-    link: "/productos",
+    link: "#productos",
   },
   {
     name: "Nosotros",
-    link: "/nosotros",
+    link: "#nosotros",
   },
-  {
-    name: "Recetas",
-    link: "/recetas",
-  },
+  // {
+  //   name: "Recetas",
+  //   link: "#recetas",
+  // },
   {
     name: "Contacto",
-    link: "/contacto",
+    link: "#contacto",
   },
 ];
 ---
@@ -46,7 +46,7 @@ const menuMex = [
       <div class="flex w-full lg:w-auto justify-between">
         <a href="/">
           <!-- Icono de la empresa -->
-          <Image src={Logo} class="w-52" alt="Logo" />
+          <Image src={Logo} class="h-16 w-24" alt="Logo" />
         </a>
         <div class="flex items-center lg:hidden">
           <!-- Icono Menu Mobile -->
@@ -78,7 +78,7 @@ const menuMex = [
               Iniciar Sesión
             </a>
           </li>
-          <li class="relative">
+          <!-- <li class="relative">
             <Dropdown class="group">
               <button
                 class="flex justify-start items-center gap-2 border-red-500 border p-2 rounded-lg"
@@ -114,9 +114,15 @@ const menuMex = [
                 </div>
               </DropdownItems>
             </Dropdown>
-          </li>
+          </li> -->
         </ul>
       </MenuItems>
     </Astronav>
   </header>
 </StickyHeader>
+
+<style>
+  .header {
+    scroll-behavior: smooth;
+  }
+</style>

@@ -1,14 +1,15 @@
 ---
 import { t } from "i18next";
-import Logo from "@components/icons/logo.astro";
+import Logo from "@assets/Logo Wislin-03.png";
+import { Image } from "astro:assets";
 ---
 
 <div
   class="text-3xl loading flex justify-center items-center flex-col h-screen"
 >
-  <Logo />
+  <Image class="animate-fade-up" src={Logo} alt="" />
   <h1
-    class="animate-fade animate-delay-700 hidden md:block font-Roboto font-normal px-24 text-5xl text-wrap text-center"
+    class="animate-fade-up animate-delay-700 hidden md:block font-normal px-24 text-5xl text-wrap text-center text-black"
   >
     {t("loading.title")}
   </h1>
