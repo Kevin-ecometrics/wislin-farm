@@ -9,7 +9,7 @@ import {
 } from "astro-navbar";
 import { Image } from "astro:assets";
 import { t } from "i18next";
-import Logo from "@assets/logo_loading.png";
+import Logo from "@components/icons/wislinLogo.astro";
 
 const menuMex = [
   // {
@@ -18,35 +18,37 @@ const menuMex = [
   // },
   {
     name: "Productos",
-    link: "/en/productos",
+    link: "#productos",
   },
   {
     name: "Nosotros",
-    link: "/en/nosotros",
+    link: "#nosotros",
   },
   {
     name: "Recetas",
-    link: "/en/recetas",
+    link: "#recetas",
   },
   {
     name: "Contacto",
-    link: "/en/contacto",
+    link: "#contacto",
   },
 ];
+
+let URL = Astro.url.pathname;
 ---
 
 <StickyHeader
   class="sticky top-0 border-b z-20 transition-all"
   scrollY={50}
-  defaultClass="py-5 border-transparent"
-  activeClass="py-2 bg-white/80 border-gray-200 backdrop-blur-lg"
+  defaultClass="border-transparent"
+  activeClass="bg-white/80 border-gray-200 backdrop-blur-lg"
 >
-  <header class="lg:flex justify-between p-5 gap-5 mx-auto container">
+  <header class="lg:flex justify-between px-5 gap-5 mx-auto container">
     <Astronav closeOnClick>
       <div class="flex w-full lg:w-auto justify-between">
         <a href="/en/">
           <!-- Icono de la empresa -->
-          <Image src={Logo} class="w-52" alt="Logo" />
+          <Logo class="w-48 h-32" alt="Logo" />
         </a>
         <div class="flex items-center lg:hidden">
           <!-- Icono Menu Mobile -->
@@ -59,16 +61,17 @@ const menuMex = [
           class="flex flex-col md:items-center px-6 text-xl lg:flex-row lg:gap-5 space-y-4 md:space-y-0"
         >
           {
-            menuMex.map((item) => (
-              <li>
-                <a
-                  href={item.link}
-                  class={`${Astro.url.pathname === item.link ? "text-red-500" : "text-black"} hover:text-red-500 hover:underline`}
-                >
-                  {t(`nav.${item.name.toLowerCase()}`)}
-                </a>
-              </li>
-            ))
+            URL === "/en/" &&
+              menuMex.map((item) => (
+                <li>
+                  <a
+                    href={item.link}
+                    class={`${Astro.url.pathname === item.link ? "text-red-500" : "text-black"} hover:text-red-500 hover:underline`}
+                  >
+                    {t(`nav.${item.name.toLowerCase()}`)}
+                  </a>
+                </li>
+              ))
           }
           <li>
             <a
@@ -120,3 +123,11 @@ const menuMex = [
     </Astronav>
   </header></StickyHeader
 >
+<script>
+  window.onload = function () {
+    var htmlElement = document.querySelector("html");
+    if (htmlElement) {
+      htmlElement.style.scrollBehavior = "smooth";
+    }
+  };
+</script>

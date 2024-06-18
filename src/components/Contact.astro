@@ -1,0 +1,54 @@
+---
+import { t } from "i18next";
+import Form from "@components/Form";
+---
+
+<div>
+  <section>
+    <h1 class="text-center text-red-600 font-bold text-4xl my-8">
+      {t("contacto.title")}
+    </h1>
+    <article
+      class="grid grid-cols-1 lg:grid-cols-2 px-16 mx-auto md:w-[90%] gap-8"
+    >
+      <div>
+        <h2 class="text-2xl font-medium text-red-600 mb-8">
+          {t("contacto.informacion")}
+        </h2>
+        <dl class="text-black">
+          <div class="flex flex-col pb-3">
+            <dt class="mb-1 text-red-600 md:text-lg font-Roboto font-medium">
+              {t("contacto.correo")}
+            </dt>
+            <dd class="text-lg font-semibold">
+              <a
+                href="mailto:contacto@wislinfarm.com"
+                class="hover:text-red-500">contacto@wislinfarm.com</a
+              >
+            </dd>
+          </div>
+          <hr />
+          <div class="flex flex-col py-3">
+            <dt class="mb-1 text-red-600 md:text-lg font-Roboto font-medium">
+              {t("contacto.nombre")}
+            </dt>
+            <dd class="text-lg font-semibold">Lic. Rosalio Lizárraga</dd>
+          </div>
+          <hr />
+          <div class="flex flex-col pt-3">
+            <dt class="mb-1 text-red-600 md:text-lg font-Roboto font-medium">
+              {t("contacto.telefono")}
+            </dt>
+            <dd class="text-lg font-semibold">
+              <a href="tel:6643058107" class="hover:text-red-500"
+                >664 305 8107</a
+              >
+            </dd>
+          </div>
+        </dl>
+        <hr />
+      </div>
+      <Form client:visible />
+    </article>
+  </section>
+</div>

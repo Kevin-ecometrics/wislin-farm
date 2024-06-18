@@ -1,118 +1,98 @@
----
-import { t } from "i18next";
----
+import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
 
-<section>
-  <h1 class="text-center text-red-600 font-medium text-4xl my-8">
-    {t("contacto.title")}
-  </h1>
-  <article
-    class="grid grid-cols-1 lg:grid-cols-2 px-24 w-full md:px-16 mx-auto md:w-[70%] gap-8"
-  >
+function Form() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+    axios.post("http://localhost:3000/contact", data).then((res) => {
+      if (res.status === 200) {
+        toast.success("Message sent successfully");
+        e.target.reset();
+      } else {
+        toast.error("Failed to send message");
+      }
+    });
+  };
+  return (
     <div>
-      <h2 class="text-2xl font-medium text-red-600 mb-8">
-        {t("contacto.informacion")}
-      </h2>
-      <dl class="text-black">
-        <div class="flex flex-col pb-3">
-          <dt class="mb-1 text-red-600 md:text-lg font-Roboto font-medium">
-            {t("contacto.correo")}
-          </dt>
-          <dd class="text-lg font-semibold">contacto@wislinfarm.com</dd>
-        </div>
-        <hr />
-        <div class="flex flex-col py-3">
-          <dt class="mb-1 text-red-600 md:text-lg font-Roboto font-medium">
-            {t("contacto.nombre")}
-          </dt>
-          <dd class="text-lg font-semibold">Lic. Rosalio Lizárraga</dd>
-        </div>
-        <hr />
-        <div class="flex flex-col pt-3">
-          <dt class="mb-1 text-red-600 md:text-lg font-Roboto font-medium">
-            {t("contacto.telefono")}
-          </dt>
-          <dd class="text-lg font-semibold">664 305 8107</dd>
-        </div>
-      </dl>
-      <hr />
-    </div>
-    <div>
-      <form class="max-w-md mx-auto">
-        <h2 class="text-2xl font-medium text-red-600 mb-8">
-          {t("contacto.formulario")}
-        </h2>
+      <form class="max-w-md mx-auto" onSubmit={handleSubmit}>
         <div class="relative z-0 w-full mb-5 group">
           <input
             type="email"
-            name="floating_email"
-            id="floating_email"
+            name="email"
+            id="email"
             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
             required
           />
           <label
-            for="floating_email"
+            for="email"
             class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
-            {t("contacto.correo")}
+            Email
           </label>
         </div>
         <div class="grid md:grid-cols-2 md:gap-6">
           <div class="relative z-0 w-full mb-5 group">
             <input
               type="text"
-              name="floating_first_name"
-              id="floating_first_name"
+              name="first_name"
+              id="first_name"
               class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               required
             />
             <label
-              for="floating_first_name"
+              for="first_name"
               class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
-              {t("contacto.nombre")}
+              First Name
             </label>
           </div>
           <div class="relative z-0 w-full mb-5 group">
             <input
               type="text"
-              name="floating_last_name"
-              id="floating_last_name"
+              name="last_name"
+              id="last_name"
               class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               required
             />
             <label
-              for="floating_last_name"
+              for="last_name"
               class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
-              {t("contacto.apellido")}
+              Last Name
             </label>
           </div>
         </div>
         <div class="relative z-0 w-full mb-5 group">
           <textarea
-            name="floating_message"
-            id="floating_message"
+            name="message"
+            id="message"
             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
-            required></textarea>
+            required
+          ></textarea>
           <label
-            for="floating_message"
+            for="message"
             class="peer-focus:font-medium absolute text-sm text-black dark:text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
-            {t("contacto.mensaje")}
+            Message
           </label>
           <button
             type="submit"
-            class="text-white bg-blue-700 my-4 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            class="text-white bg-blue-700 my-4 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
-            {t("contacto.enviar")}
+            Send Message
           </button>
         </div>
       </form>
+      <Toaster position="top-right" />
     </div>
-  </article>
-</section>
+  );
+}
+
+export default Form;

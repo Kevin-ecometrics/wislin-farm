@@ -9,7 +9,7 @@ import {
 } from "astro-navbar";
 import { Image } from "astro:assets";
 import { t } from "i18next";
-import Logo from "@assets/Logo Wislin-03.png";
+import Logo from "@components/icons/wislinLogo.astro";
 
 const menuMex = [
   // {
@@ -33,22 +33,25 @@ const menuMex = [
     link: "#contacto",
   },
 ];
+
+let URL = Astro.url.pathname;
+console.log(URL);
 ---
 
 <StickyHeader
   class="sticky top-0 border-b z-20 transition-all"
   scrollY={50}
-  defaultClass="py-5 border-transparent"
-  activeClass="py-2 bg-white/80 border-gray-200 backdrop-blur-lg"
+  defaultClass="border-transparent"
+  activeClass="bg-white/80 border-gray-200 backdrop-blur-lg"
 >
-  <header class="lg:flex justify-between p-5 gap-5 mx-auto container">
+  <header class="lg:flex justify-between px-5 gap-5 mx-auto container">
     <Astronav closeOnClick>
       <div class="flex w-full lg:w-auto justify-between">
         <a href="/">
           <!-- Icono de la empresa -->
-          <Image src={Logo} class="h-16 w-24" alt="Logo" />
+          <Logo class="w-48 h-32" alt="Logo" />
         </a>
-        <div class="flex items-center lg:hidden">
+        <div class="flex items-center lg:hidden px-4">
           <!-- Icono Menu Mobile -->
           <MenuIcon class="w-8 h-8 text-gray-800" />
         </div>
@@ -59,17 +62,19 @@ const menuMex = [
           class="flex flex-col md:items-center px-6 text-xl lg:flex-row lg:gap-5 space-y-4 md:space-y-0"
         >
           {
-            menuMex.map((item) => (
-              <li>
-                <a
-                  href={item.link}
-                  class={`${Astro.url.pathname === item.link ? "text-red-500" : "text-black"} hover:text-red-500 hover:underline`}
-                >
-                  {t(`nav.${item.name.toLowerCase()}`)}
-                </a>
-              </li>
-            ))
+            URL === "/" &&
+              menuMex.map((item) => (
+                <li>
+                  <a
+                    href={item.link}
+                    class={` text-black hover:text-red-500 hover:underline`}
+                  >
+                    {t(`nav.${item.name.toLowerCase()}`)}
+                  </a>
+                </li>
+              ))
           }
+
           <li>
             <a
               class="border border-blue-400 px-2 sm:px-4 py-1 sm:py-2 text-xs sm:text-base rounded-lg text-blue-400 hover:bg-blue-400 hover:text-white"
@@ -78,7 +83,8 @@ const menuMex = [
               Iniciar Sesión
             </a>
           </li>
-          <!-- <li class="relative">
+
+          <li class="relative">
             <Dropdown class="group">
               <button
                 class="flex justify-start items-center gap-2 border-red-500 border p-2 rounded-lg"
@@ -114,15 +120,18 @@ const menuMex = [
                 </div>
               </DropdownItems>
             </Dropdown>
-          </li> -->
+          </li>
         </ul>
       </MenuItems>
     </Astronav>
   </header>
 </StickyHeader>
 
-<style>
-  .header {
-    scroll-behavior: smooth;
-  }
-</style>
+<script>
+  window.onload = function () {
+    var htmlElement = document.querySelector("html");
+    if (htmlElement) {
+      htmlElement.style.scrollBehavior = "smooth";
+    }
+  };
+</script>

@@ -2,6 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Navbar from "@components/Navbar.astro";
 import { t, changeLanguage } from "i18next";
+import { slide } from "astro:transitions";
 
 changeLanguage("es");
 
@@ -48,35 +49,26 @@ const info = [
     title: t("productos.chorizo"),
   },
 ];
-
 // const currentPath = window.location.pathname;
 // console.log(currentPath);
 const currentInfo = info.find((i) => i.path === `/productos/${productos}`);
 ---
 
 <Layout title={`Wislin - ${productos}`}>
-  <main>
+  <main transition:animate={slide({ duration: "0.9s" })}>
     <div>
       <Navbar />
       <hr class="border border-gray-300" />
-      <div class="my-12 md:mb-48">
+      <div class="my-12">
         {
           currentInfo && (
             <>
               <h1 class="text-4xl font-bold text-center mb-16 text-red-600 uppercase">
                 {currentInfo.title}
               </h1>
-              <div class="flex items-center justify-center w-3/5 mx-auto flex-col md:flex-row gap-8">
-                <img
-                  src={currentInfo.img}
-                  class="
-            w-96 
-            rounded-2xl"
-                  alt=""
-                />
-                <p class="text-center whitespace-normal text-2xl">
-                  {currentInfo.text}
-                </p>
+              <div class="flex items-center justify-center w-[70%] mx-auto flex-col md:flex-row gap-16">
+                <img src={currentInfo.img} class="w-96 rounded-2xl" alt="" />
+                <p class="text-center break-all text-2xl">{currentInfo.text}</p>
               </div>
             </>
           )

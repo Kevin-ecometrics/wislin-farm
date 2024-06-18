@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import Logo from "../assets/logo_loading.png";
+import Logo from "@components/icons/wislinLogo.astro";
 import { t, changeLanguage } from "i18next";
 
 changeLanguage("es");
@@ -94,13 +94,13 @@ changeLanguage("es");
   </head>
   <body>
     <main class="center">
-      <Image src={Logo} alt="404" width={800} />
+      <Logo alt="404" class="size-96 animate-flip-up" />
       <h1>
         <span class="text-4xl text-red-600">404:</span>
         <span class="text-4xl text-red-600">{t("404.subtitle")}</span>
       </h1>
       <br />
-      <pre class="mb-8 text-white">Path: {Astro.url.pathname}</pre>
+      <!-- <pre class="mb-8 text-white">Path: {Astro.url.pathname}</pre> -->
       <pre class="text-white">{t("404.parrafo")}</pre>
     </main>
   </body>

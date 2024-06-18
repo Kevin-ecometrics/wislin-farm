@@ -7,14 +7,14 @@ import Hero from "@components/Hero.astro";
 import Acerca from "@components/Acerca.astro";
 import Footer from "@components/Footer.astro";
 import Product from "@components/Product.astro";
-import Form from "@components/Form.astro";
+import Contact from "@components/Contact.astro";
 
 changeLanguage("es");
 ---
 
 <Layout title="WislinFarm">
   <Loading />
-  <main>
+  <main class="w-screen">
     <div class="page-content" style="display: none;">
       <Navbar />
       <hr class="border border-gray-300" />
@@ -25,7 +25,7 @@ changeLanguage("es");
         <Product />
       </div>
       <hr class="border border-gray-300 mb-8" />
-      <div id="nosotros" class="container mx-auto w-4/6 px-8">
+      <div id="nosotros" class="container mx-auto md:w-[90%] px-16">
         <div class="flex flex-col">
           <h1 class="text-4xl font-bold text-center mb-16 text-red-600">
             {t("nosotros.title")}
@@ -40,7 +40,7 @@ changeLanguage("es");
       </div>
       <hr class="border border-gray-300" />
       <div id="contacto">
-        <Form />
+        <Contact />
       </div>
       <Footer />
     </div>
