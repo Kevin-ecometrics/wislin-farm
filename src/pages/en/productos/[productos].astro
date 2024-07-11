@@ -1,6 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Navbar from "@components/NavbarEN.astro";
+import Navbar from "@components/NavbarProductEN.astro";
 import { t, changeLanguage } from "i18next";
 import { slide } from "astro:transitions";
 
@@ -13,6 +13,10 @@ export function getStaticPaths() {
     { params: { productos: "queso-oaxaca" } },
     { params: { productos: "queso-seco" } },
     { params: { productos: "chorizo" } },
+    { params: { productos: "queso-fresco" } },
+    { params: { productos: "queso-monterrey" } },
+    { params: { productos: "chorizo-mixto" } },
+    { params: { productos: "chorizo-cerdo" } },
   ];
 }
 const { productos } = Astro.params;
@@ -20,33 +24,67 @@ console.log(productos);
 const info = [
   {
     path: "/productos/queso-fresco",
-    img: "https://mygourmet.com.mx/wp-content/uploads/2022/04/Queso-artesanal-1024x681-1.jpg",
+    img: "/5. Tarjeta Fresco (C).png",
     text: t("productos.fresco-text"),
+    description: t("productos.fresco-text2"),
+    presentation: t("productos.fresco-text3"),
     title: t("productos.queso-fresco"),
   },
   {
     path: "/productos/queso-panela",
     img: "/cotija.png",
     text: t("productos.panela-text"),
+    description: t("productos.panela-text2"),
+    presentation: t("productos.panela-text3"),
     title: t("productos.queso-panela"),
   },
   {
     path: "/productos/queso-oaxaca",
     img: "/oaxaca.png",
     text: t("productos.oaxaca-text"),
+    description: t("productos.oaxaca-text2"),
+    presentation: t("productos.oaxaca-text3"),
     title: t("productos.queso-oaxaca"),
   },
   {
     path: "/productos/queso-seco",
     img: "/cotija.png",
     text: t("productos.seco-text"),
+    description: t("productos.seco-text2"),
+    presentation: t("productos.seco-text3"),
     title: t("productos.queso-seco"),
+  },
+  {
+    path: "/productos/queso-monterrey",
+    img: "/6. Monterrey (C).png",
+    text: t("productos.monterrey-text"),
+    description: t("productos.monterrey-text2"),
+    presentation: t("productos.monterrey-text3"),
+    title: t("productos.queso-monterrey"),
   },
   {
     path: "/productos/chorizo",
     img: "/chorizo.png",
     text: t("productos.chorizo-text"),
+    description: t("productos.chorizo-text2"),
+    presentation: t("productos.chorizo-text3"),
     title: t("productos.chorizo"),
+  },
+  {
+    path: "/productos/chorizo-mixto",
+    img: "/7. Tarjeta Chorizo Mixto (C).png",
+    text: t("productos.chorizo-mixto-text"),
+    description: t("productos.chorizo-mixto-text2"),
+    presentation: t("productos.chorizo-mixto-text3"),
+    title: t("productos.chorizo-mixto"),
+  },
+  {
+    path: "/productos/chorizo-cerdo",
+    img: "/8. Tarjeta Chorizo Cerdo (C).png",
+    text: t("productos.chorizo-cerdo-text"),
+    description: t("productos.chorizo-cerdo-text2"),
+    presentation: t("productos.chorizo-cerdo-text3"),
+    title: t("productos.chorizo-cerdo"),
   },
 ];
 // const currentPath = window.location.pathname;
@@ -66,9 +104,29 @@ const currentInfo = info.find((i) => i.path === `/productos/${productos}`);
               <h1 class="text-4xl font-bold text-center mb-16 text-red-600 uppercase">
                 {currentInfo.title}
               </h1>
-              <div class="flex items-center justify-center w-[70%] mx-auto flex-col md:flex-row gap-16">
-                <img src={currentInfo.img} class="w-96 rounded-2xl" alt="" />
-                <p class="text-center break-all text-2xl">{currentInfo.text}</p>
+
+              <div class="grid grid-cols-1 md:grid-cols-3 px-16 gap-8 w-[90%] mx-auto">
+                <div class="col-span-1">
+                  {" "}
+                  <img src={currentInfo.img} class="w-96 rounded-2xl" alt="" />
+                </div>
+                <div class="col-span-2">
+                  {" "}
+                  <h1 class="text-3xl mb-2 font-semibold text-red-500">
+                    {t("productos.descripcion")}
+                  </h1>
+                  <p class="text-start text-xl mb-8">{currentInfo.text}</p>
+                  <h1 class="text-3xl mb-2 font-semibold text-red-500">
+                    {t("productos.propiedades")}
+                  </h1>
+                  <p class="text-start text-xl mb-8">
+                    {currentInfo.description}
+                  </p>{" "}
+                  <h1 class="text-3xl mb-2 font-semibold text-red-500">
+                    {t("productos.presentacion")}
+                  </h1>
+                  <p class="text-start text-xl">{currentInfo.presentation}</p>{" "}
+                </div>
               </div>
             </>
           )

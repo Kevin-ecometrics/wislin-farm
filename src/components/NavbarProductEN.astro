@@ -33,9 +33,6 @@ const menuMex = [
     link: "#contacto",
   },
 ];
-
-let URL = Astro.url.pathname;
-let PRODUCT = Astro.url.pathname.split("/").pop();
 ---
 
 <StickyHeader
@@ -61,32 +58,11 @@ let PRODUCT = Astro.url.pathname.split("/").pop();
         <ul
           class="flex flex-col md:items-center px-6 text-xl lg:flex-row lg:gap-5 space-y-4 md:space-y-0"
         >
-          {
-            URL === "/en/" &&
-              menuMex.map((item) => (
-                <li>
-                  <a
-                    href={item.link}
-                    class={`${Astro.url.pathname === item.link ? "text-red-500" : "text-black"} hover:text-red-500 hover:underline`}
-                  >
-                    {t(`nav.${item.name.toLowerCase()}`)}
-                  </a>
-                </li>
-              ))
-          }
-
-          {
-            URL === `/en/productos/${PRODUCT}` && (
-              <li>
-                <a
-                  href="/en/productos"
-                  class="hover:text-red-500 hover:underline"
-                >
-                  Products
-                </a>
-              </li>
-            )
-          }
+          <li>
+            <a href="/en/productos" class="hover:text-red-500 hover:underline">
+              Products
+            </a>
+          </li>
 
           <li>
             <a

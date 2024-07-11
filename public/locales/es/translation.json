@@ -9,11 +9,11 @@
     "Ingles": "Ingles"
   },
   "loading": {
-    "title": "Del campo a tu mesa, cada queso es una experiencia única en sabor y calidad"
+    "title": "Del campo a tu mesa"
   },
   "hero": {
     "title": "Del campo a tu mesa, cada queso es una experiencia única en sabor y calidad",
-    "subtitle": "Somos una empresa familiar con más de 30 años y 3 generaciones de presencia en Baja California, dedicados a la elaboración y venta de productos lácteos artesanales. Los quesos que fabricamos están hechos con leche pasteurizada de vaca, libre de hormonas, aditivos y conservadores. Día a día creamos productos únicos y originales gracias a las habilidades y conocimientos de nuestros artesanos. Nuestro objetivo como empresa es ofrecer los mejores y más frescos productos con la mayor calidad que nos distingue.    ",
+    "subtitle": "Somos una empresa familiar con más de 30 años y 4 generaciones de presencia en Baja California, dedicados a la elaboración y venta de productos lácteos artesanales. Los quesos que fabricamos están hechos con leche pasteurizada de vaca, libre de hormonas, aditivos y conservadores. Día a día creamos productos únicos y originales gracias a las habilidades y conocimientos de nuestros artesanos. Nuestro objetivo como empresa es ofrecer los mejores y más frescos productos con la mayor calidad que nos distingue.    ",
     "productos": "Ver productos",
     "servicios": "Ver servicios",
     "parrafo": "      Estamos enfocados en la producción y distribución de queso y chorizo de cerdo y de res."
@@ -29,30 +29,70 @@
   "productos": {
     "queso-fresco": "Queso fresco",
     "fresco-link": "/productos/queso-fresco",
-    "fresco-info": "Este queso se elabora con leche entera pero es relativamente bajo en grasa y colesterol​ Este es un queso blanco esponjoso.",
-    "fresco-text": "El queso mexicano más básico es el queso fresco, del que se han derivado otros quesos como el panela, adobera, canasto y Oaxaca. Este queso se elabora con leche entera pero es relativamente bajo en grasa y colesterol​ Este es un queso blanco esponjoso, cuyos orígenes se remontan a Burgos, España y utiliza principalmente para espolvorearse sobre los platos. Este queso se hace en casi todas partes de México, con poca variación.    ",
+    "fresco-info": "Este es un queso blanco, suave y húmedo. Tiene un sabor suave y ligeramente salado, y es perfecto para desmoronar sobre ensaladas, tacos y otros platos mexicanos.",
+    "fresco-text": "Suave textura granulosa y cremosa, húmedo con un ligero sabor salado. Nuestro queso tiene pocos ingredientes sin conservadores El aliado perfecto, desmorónalo o cómelo en trozos",
+    "fresco-text2": "Hecho con leche entera 100% de vaca pasteurizada, Rico en calcio y potasio, Alto en Vitamina A y D",
+    "fresco-text3": "Disponible en: 250 G 500 g 1 Kg 3.5 kg *Sujeto a personalización*",
    
     "queso-panela": "Queso panela",
     "panela-link": "/productos/queso-panela",
     "panela-info": "Queso suave y quebradizo, de forma cónica invertida, en piezas que van desde 0.5 hasta 2 Kg, aproximadamente. ",
-    "panela-text": "Queso suave y quebradizo, de forma cónica invertida, en piezas que van desde 0.5 hasta 2 Kg, aproximadamente, no se pueden hacer piezas más grandes debido a su consistencia, tan blanda, ya que se deformarían por su peso, no se derrite o funde cuando se calienta, se puede poner suave y cremoso, pero no perderá su forma. Es genuino y fresco ya que habita un ambiente acuoso similar al Queso mozzarella y se puede utilizar de la misma manera. También puede ser usado frito, a pesar de que mantiene su forma y no se derrite con mucha facilidad.    ",
-    
+    "panela-text": "Sabor suave, textura firme cremoso y fresco es un básico. Nuestro queso tiene pocos ingredientes sin conservadores El versátil, córtalo en cubos o rebánalo",
+    "panela-text2": "Alto en proteína, Bajo en grasa, Hecho con leche entera 100% de vaca pasteurizada ",
+    "panela-text3": "Disponible en: 1/2 kg, 2 kg, y 4 kg",
+   
+   
     "queso-oaxaca": "Queso oaxaca",
     "oaxaca-link": "/productos/queso-oaxaca",
     "oaxaca-info": "Uno de los productos icónicos de la gastronomía mexicana; el queso Oaxaca o quesillo es un queso de pasta hilada.",
-    "oaxaca-text": "Uno de los productos icónicos de la gastronomía mexicana; el queso Oaxaca o quesillo es un queso de pasta hilada, proveniente del estado que le otorga su nombre. Junto con el queso Panela, es considerado uno de los mejores quesos de origen orgullosamente mexicano.    El queso Oaxaca tiene un sabor ácido, ligeramente cremoso, posee propiedades de fundición que lo hacen ideal para platos como quesadillas, queso fundido y para acompañar sopas y tacos.",
+    "oaxaca-text": "Sabor cremoso, consistencia semiblanda con alta calidad de hilada con toques ácidos. Nuestro queso tiene pocos ingredientes sin conservadores Deshebra y derrite fácilmente, el favorito de todos",
+    "oaxaca-text2": "Rico en calcio, Hecho con leche entera 100% de vaca pasteurizada",
+    "oaxaca-text3": "Disponible en: 250 g 500g 1 kg 2 kg *Sujeto a personalización *",
     
     "queso-seco": "Queso seco",
     "seco-link": "/productos/queso-seco",
     "seco-info": "Queso madurado o añejado. Tiene la característica de haber perdido todo su suero, ser más compacto, de sabor más salado y con mayor porcentaje de grasa.",
-    "seco-text": "Queso madurado o añejado. Tiene la característica de haber perdido todo su suero, ser más compacto, de sabor más salado y con mayor porcentaje de grasa.    ",
+    "seco-text": "Añejado sabor salado, de textura terrosa y pasta dura. Ideal para dar el toque especial desmoronado sobre cualquier platillo",
+    "seco-text2": "Contiene Vitamina B, Hecho con leche entera 100% de vaca",
+    "seco-text3": "Disponible en: Disponible en: ½ kg 1 kg *Sujeto a personalización*",
     
     "chorizo": "Chorizo",
     "chorizo-link": "/productos/chorizo",
     "chorizo-info": "El chorizo es un embutido que se elabora con carne de cerdo, pimentón y otras especias. Se puede consumir crudo, cocido, a la parrilla o frito.",
-    "chorizo-text": "El chorizo es un embutido que se elabora con carne de cerdo, pimentón y otras especias. Se puede consumir crudo, cocido, a la parrilla o frito.    ",
+    "chorizo-text": "Textura carnosa con un sabor especial Combínalo con otros alimentos para elevar su sabor.   ",
+    "chorizo-text2": "Carne 100% de Res, Excelente fuente de proteína",
+    "chorizo-text3": "Disponible en: Tira 12 pz, 1 kg Paquete 10 pz 2 kg",
 
-    "button": "Ver más"
+    "queso-monterrey": "Queso monterrey",
+    "monterrey-link": "/productos/queso-monterrey",
+    "monterrey-info": "El queso Monterrey es un queso semiduro, de origen mexicano, elaborado con leche de vaca.",
+    "monterrey-text": "Textura semiblanda sabor suave semi acido Ideal para pastas, sobre platillos y ensaladas lo puedes rayar, cortar y derretir",
+    "monterrey-text2": "Hecho con leche entera 100% de vaca pasteurizada, Fuente de proteína",
+    "monterrey-text3": "Disponible en: Bara de 2.3 kg Barra de 2.5 kg, Caja de 18 kg en bloque Caja de 20 kg en bloque",
+
+    "chorizo-mixto": "Chorizo mixto",
+    "chorizo-mixto-link": "/productos/chorizo-mixto",
+    "chorizo-mixto-info": "ESTE CHORIZO ESTÁ HECHO DE UNA MEZCLA DE CARNE DE RES Y CERDO. COMBINA LOS SABORES RICOS Y PROFUNDOS DE AMBAS CARNES, Y ESTÁ SAZONADO CON UNA VARIEDAD DE ESPECIAS PARA UN SABOR PICANTE Y COMPLEJO.",
+    "chorizo-mixto-text": "Sabor único y de calidad Sírvelos como relleno para verduras o platillos   ",
+    "chorizo-mixto-text2": "Fuente de proteína, Delicioso sabor",
+    "chorizo-mixto-text3": "Disponible en: Granel ½ kg Granel 1 kg",
+
+    "chorizo-cerdo": "Chorizo de cerdo",
+    "chorizo-cerdo-link": "/productos/chorizo-cerdo",
+    "chorizo-cerdo-info": "ES UN TIPO DE SALCHICHA ESPAÑOLA HECHA DE CARNE DE CERDO PICADA. ESTÁ SAZONADO CON ESPECIAS COMO PIMENTÓN Y AJO, LO QUE LE DA UN SABOR FUERTE Y PICANTE.",
+    "chorizo-cerdo-text": "Sabor único y de calidad Sírvelos como relleno para verduras o platillos   ",
+    "chorizo-cerdo-text2": "Fuente de proteína, Delicioso sabor",
+    "chorizo-cerdo-text3": "Disponible en: Granel ½ kg Granel 1 kg",
+    
+
+
+
+
+    "button": "Ver más",
+    "descripcion": "Descripción",
+    "propiedades": "Propiedades",
+    "presentacion": "Presentación"
+
 
   },
   "nosotros": {
@@ -60,6 +100,11 @@
     "title": "Nosotros",
     "subtitle": "WISLIN se caracteriza por ser un negocio familiar siendo la cuarta generación de productores de queso radicados en la ciudad de Tijuana; estamos enfocados en la producción y distribución de queso y chorizo de cerdo y de res.",
     "parrafo": "Actualmente estamos incorporando nuevos productos a nuestra ruta de distribución, las cuales están enfocadas en proveer nuestros productos a tiendas y abarrotes en general, generando alianzas estratégicas con otros distribuidores para llegar a mayores sectores de la población.    "
+  },
+  "historia": {
+    "title": "Historia ",
+    "subtitle": "Wislin Farm es una herencia familiar de queseros cuya historia comenzó hace poco más de 40 años en Tijuana, Baja California. Vendiendo quesos de forma ambulante a tiendas de abarrotes descansándose por su sabor y frescura posteriormente fue ganando el gusto de las familias convirtiéndose en un pequeño negocio. Hoy en día su cuarta generación con enorme visión ha convertido el pequeño oficio en una empresa creciente productora y distribuidora de productos lácteos y embutidos en varios sectores como supermercados, restaurantes, abarrotes, tiendas de conveniencia, en mayoreo y menudeo",
+    "parrafo": "Este crecimiento se debe a un enorme profesionalismo y compromiso para traer diariamente productos puros con ingredientes naturales y sostenibles, con una producción de calidad aunado a una impecable atención personalizada. "
   },
     "contacto": {
       "title": "Contacto",

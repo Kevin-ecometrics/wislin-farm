@@ -1,12 +1,6 @@
 ---
 import { t } from "i18next";
 let images = [
-  // {
-  //   class: t("productos.queso-fresco"),
-  //   info: t("productos.fresco-info"),
-  //   url: "https://mygourmet.com.mx/wp-content/uploads/2022/04/Queso-artesanal-1024x681-1.jpg",
-  //   link: t("productos.fresco-link"),
-  // },
   {
     class: t("productos.queso-panela"),
     info: t("productos.panela-info"),
@@ -26,17 +20,41 @@ let images = [
     link: t("productos.seco-link"),
   },
   {
+    class: t("productos.queso-fresco"),
+    info: t("productos.fresco-info"),
+    url: "/5. Tarjeta Fresco (A).png",
+    link: t("productos.fresco-link"),
+  },
+  {
+    class: t("productos.queso-monterrey"),
+    info: t("productos.monterrey-info"),
+    url: "/6. Monterrey (A).png",
+    link: t("productos.monterrey-link"),
+  },
+  {
     class: t("productos.chorizo"),
     info: t("productos.chorizo-info"),
     url: "/4. Tarjeta Chorizo.png",
     link: t("productos.chorizo-link"),
   },
+  {
+    class: t("productos.chorizo-mixto"),
+    info: t("productos.chorizo-mixto-info"),
+    url: "/7. Tarjeta Chorizo Mixto (A).png",
+    link: t("productos.chorizo-mixto-link"),
+  },
+  {
+    class: t("productos.chorizo-cerdo"),
+    info: t("productos.chorizo-cerdo-info"),
+    url: "/8. Tarjeta Chorizo Cerdo(A).png",
+    link: t("productos.chorizo-cerdo-link"),
+  },
 ];
 ---
 
 <section class="md:w-[90%] mx-auto">
-  <div class="py-4">
-    <h1 class="text-center text-red-600 text-5xl mb-16 font-bold">
+  <div class="py-8">
+    <h1 class="text-center text-red-600 text-4xl mb-16 font-bold">
       {t("nav.productos")}
     </h1>
     <div class="flex flex-wrap justify-center gap-16">

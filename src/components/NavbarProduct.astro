@@ -14,7 +14,7 @@ import Logo from "@components/icons/wislinLogo.astro";
 const menuMex = [
   // {
   //   name: "Inicio",
-  //   link: "/en/",
+  //   link: "/",
   // },
   {
     name: "Productos",
@@ -24,18 +24,15 @@ const menuMex = [
     name: "Nosotros",
     link: "#nosotros",
   },
-  {
-    name: "Recetas",
-    link: "#recetas",
-  },
+  // {
+  //   name: "Recetas",
+  //   link: "#recetas",
+  // },
   {
     name: "Contacto",
     link: "#contacto",
   },
 ];
-
-let URL = Astro.url.pathname;
-let PRODUCT = Astro.url.pathname.split("/").pop();
 ---
 
 <StickyHeader
@@ -47,11 +44,11 @@ let PRODUCT = Astro.url.pathname.split("/").pop();
   <header class="lg:flex justify-between px-5 gap-5 mx-auto container">
     <Astronav closeOnClick>
       <div class="flex w-full lg:w-auto justify-between">
-        <a href="/en/">
+        <a href="/">
           <!-- Icono de la empresa -->
           <Logo class="w-48 h-32" alt="Logo" />
         </a>
-        <div class="flex items-center lg:hidden">
+        <div class="flex items-center lg:hidden px-4">
           <!-- Icono Menu Mobile -->
           <MenuIcon class="w-8 h-8 text-gray-800" />
         </div>
@@ -61,71 +58,51 @@ let PRODUCT = Astro.url.pathname.split("/").pop();
         <ul
           class="flex flex-col md:items-center px-6 text-xl lg:flex-row lg:gap-5 space-y-4 md:space-y-0"
         >
-          {
-            URL === "/en/" &&
-              menuMex.map((item) => (
-                <li>
-                  <a
-                    href={item.link}
-                    class={`${Astro.url.pathname === item.link ? "text-red-500" : "text-black"} hover:text-red-500 hover:underline`}
-                  >
-                    {t(`nav.${item.name.toLowerCase()}`)}
-                  </a>
-                </li>
-              ))
-          }
-
-          {
-            URL === `/en/productos/${PRODUCT}` && (
-              <li>
-                <a
-                  href="/en/productos"
-                  class="hover:text-red-500 hover:underline"
-                >
-                  Products
-                </a>
-              </li>
-            )
-          }
+          <li>
+            <a href="/productos" class="hover:text-red-500 hover:underline">
+              Productos
+            </a>
+          </li>
 
           <li>
             <a
-              class="border border-blue-400 px-4 py-2 rounded-lg text-blue-400 hover:bg-blue-400 hover:text-white"
+              class="border border-blue-400 px-2 sm:px-4 py-1 sm:py-2 text-xs sm:text-base rounded-lg text-blue-400 hover:bg-blue-400 hover:text-white"
               href="/system/ventas"
             >
-              Log in
+              Iniciar Sesión
             </a>
           </li>
+
           <li class="relative">
             <Dropdown class="group">
               <button
                 class="flex justify-start items-center gap-2 border-red-500 border p-2 rounded-lg"
               >
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
-                  alt="US Flag"
+                  src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg"
+                  alt="Mexican Flag"
                   class="w-12 h-6"
                 />
-                English
+                Español
               </button>
               <DropdownItems>
                 <div
-                  class="lg:absolute bg-white hover:bg-slate-100 top-14 w-40 border shadow rounded p-2"
+                  class="lg:absolute bg-white hover:bg-slate-100 top-14 w-36 border shadow rounded p-2"
                 >
                   <ul>
                     <li>
                       <a
                         href={Astro.url.pathname.startsWith("/en")
-                          ? Astro.url.pathname.slice(3)
-                          : Astro.url.pathname}
+                          ? Astro.url.pathname
+                          : "/en" + Astro.url.pathname}
                         class="flex justify-start items-center gap-2 p-2 rounded-lg"
                       >
                         <img
-                          src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg"
-                          alt="Mexican Flag"
+                          src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
+                          alt="US Flag"
                           class="w-12 h-6"
                         />
-                        Español
+                        English
                       </a>
                     </li>
                   </ul>
@@ -136,8 +113,9 @@ let PRODUCT = Astro.url.pathname.split("/").pop();
         </ul>
       </MenuItems>
     </Astronav>
-  </header></StickyHeader
->
+  </header>
+</StickyHeader>
+
 <script>
   window.onload = function () {
     var htmlElement = document.querySelector("html");

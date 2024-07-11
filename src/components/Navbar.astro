@@ -35,7 +35,8 @@ const menuMex = [
 ];
 
 let URL = Astro.url.pathname;
-console.log(URL);
+let PRODUCT = Astro.url.pathname.split("/").pop();
+console.log(PRODUCT);
 ---
 
 <StickyHeader
@@ -75,10 +76,20 @@ console.log(URL);
               ))
           }
 
+          {
+            URL === `/productos/${PRODUCT}` && (
+              <li>
+                <a href="/productos" class="hover:text-red-500 hover:underline">
+                  Productos
+                </a>
+              </li>
+            )
+          }
+
           <li>
             <a
               class="border border-blue-400 px-2 sm:px-4 py-1 sm:py-2 text-xs sm:text-base rounded-lg text-blue-400 hover:bg-blue-400 hover:text-white"
-              href="/system/venta"
+              href="/system/ventas"
             >
               Iniciar Sesión
             </a>

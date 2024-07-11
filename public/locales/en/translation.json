@@ -9,11 +9,11 @@
     "Ingles": "English"
   },
   "loading": {
-    "title": "Preparing the fresh flavors of our dairy products distributor for you!"
+    "title": "From the field to your table"
   },
   "hero":{
     "title": "Welcome to our family business",
-    "subtitle": "We are a family business with more than 30 years and 3 generations of presence in Baja California, dedicated to the production and sale of artisanal dairy products. The cheeses we make are made with pasteurized cow's milk, free of hormones, additives and preservatives. Every day we create unique and original products thanks to the skills and knowledge of our artisans. Our goal as a company is to offer the best and freshest products with the highest quality that distinguishes us.    ",
+    "subtitle": "We are a family business with more than 30 years and 4 generations of presence in Baja California, dedicated to the production and sale of artisanal dairy products. The cheeses we make are made with pasteurized cow's milk, free of hormones, additives and preservatives. Every day we create unique and original products thanks to the skills and knowledge of our artisans. Our goal as a company is to offer the best and freshest products with the highest quality that distinguishes us.    ",
     "productos": "See products",
     "servicios": "See services",
     "parrafo": "We are focused on the production and distribution of pork and beef cheese and chorizo.    "
@@ -29,37 +29,77 @@
   "productos": {
     "queso-fresco": "Fresh cheese",
     "fresco-link": "/en/productos/queso-fresco",
-    "fresco-info": "Fresh cheese is a soft, white cheese that is made from cow's milk. It is a very popular cheese in Mexico and is used in a variety of dishes.",
-    "fresco-text": "The most basic Mexican cheese is queso fresco, from which other cheeses such as panela, adobera, canasto and Oaxaca have been derived. This cheese is made with whole milk but is relatively low in fat and cholesterol. This is a fluffy white cheese, whose origins date back to Burgos, Spain and is mainly used to sprinkle on dishes. This cheese is made almost everywhere in Mexico, with little variation.    ",
+    "fresco-info": "This is a white, soft, moist cheese. It has a mild, slightly salty flavor, and is perfect for crumbling on salads, tacos and other Mexican dishes.",
+    "fresco-text": "Smooth grainy and creamy texture, moist with a slight salty flavor. Our cheese has few ingredients with no preservatives The perfect ally, crumble it or eat it in chunks.",
+    "fresco-text2": "Made with 100% pasteurized whole cow's milk, Rich in calcium and potassium, High in Vitamin A and D",
+    "fresco-text3": "Available in: 250 G 500 g 1 Kg 3.5 kg *Subject to customization*",
 
+   
+    
     "queso-panela": "Panela cheese",
     "panela-link": "/en/productos/queso-panela",
     "panela-info": "Panela cheese is a white, fresh and smooth cheese that is made from cow's milk. It is a very popular cheese in Mexico and is used in a variety of dishes.",
     "panela-text": "Soft and brittle cheese, with an inverted conical shape, in pieces ranging from 0.5 to 2 kg, approximately, larger pieces cannot be made due to its consistency, so soft, since they would be deformed due to their weight, it does not melt or melt When heated, it may become soft and creamy, but will not lose its shape. It is genuine and fresh as it inhabits a watery environment similar to Mozzarella Cheese and can be used in the same way. It can also be used fried, although it holds its shape and does not melt very easily.    ",
-
+    "panela-text2": "High in protein, Low in fat, Made with 100% pasteurized whole cow's milk ",
+    "panela-text3": "Available in: 1/2 kg, 2 kg, and 4 kg",
+   
 
     "queso-oaxaca": "Oaxaca cheese",
     "oaxaca-link": "/en/productos/queso-oaxaca",
     "oaxaca-info": "Oaxaca cheese is a white, fresh and smooth cheese that is made from cow's milk. It is a very popular cheese in Mexico and is used in a variety of dishes.",
     "oaxaca-text": "    One of the iconic products of Mexican gastronomy; Oaxaca cheese or quesillo is a pasta filata cheese, from the state that gives it its name. Along with Panela cheese, it is considered one of the best cheeses of proudly Mexican origin.   Oaxaca cheese has an acidic, slightly creamy flavor, it has melting properties that make it ideal for dishes such as quesadillas, melted cheese and to accompany soups and tacos.",
-
+    "oaxaca-text2": "Rich in calcium, Made with 100% pasteurized whole cow's milk.", 
+    "oaxaca-text3": "Available in: 250 g 500g 1 kg 2 kg *Subject to customization *",
     "queso-seco": "Dry cheese",
     "seco-link": "/en/productos/queso-seco",
     "seco-info": "Dry cheese is a hard, white cheese that is made from cow's milk. It is a very popular cheese in Mexico and is used in a variety of dishes.",
     "seco-text": "Matured or aged cheese. It has the characteristic of having lost all its whey, being more compact, saltier in flavor and with a higher percentage of fat.    ",
-
+    "seco-text2": "Contains Vitamin B, Made with 100% whole cow's milk",
+    "seco-text3": "Available in: Available in: ½ kg 1 kg *Subject to customization*",
     "chorizo": "Chorizo",
     "chorizo-link": "/en/productos/chorizo",
     "chorizo-info": "Chorizo is a type of sausage that is made from pork and beef. It is a very popular sausage in Mexico and is used in a variety of dishes.",
     "chorizo-text": "Chorizo is a type of sausage that is made from pork and beef. It is a very popular sausage in Mexico and is used in a variety of dishes.",
+    "chorizo-text2": "100% Beef, Excellent source of protein",
+    "chorizo-text3": "Available in: Strip 12 pz, 1 kg Package 10 pz 2 kg",
+    
+    "queso-monterrey": "Monterrey cheese",
+    "monterrey-link":"/en/productos/queso-monterrey",
+    "monterrey-info": "Monterrey cheese is a semi-hard cheese, of Mexican origin, made from cow's milk.", 
+    "monterrey-text": "Semi-soft texture, mild flavor, semi-acid, ideal for pastas, on dishes and salads, you can grate it, cut it and melt it",
+    "monterrey-text2": "Made with 100% pasteurized whole cow's milk, source of protein",
+    "monterrey-text3": "Available in: 2.3 kg stick 2.5 kg bar, 18 kg block box 20 kg block box",
+
+    "chorizo-mixto": "Mixed chorizo",
+    "chorizo-mixto-link":"/en/productos/chorizo-mixto",
+    "chorizo-mixto-info": "THIS CHORIZO IS MADE FROM A MIX OF BEEF AND PORK. IT COMBINES THE RICH, DEEP FLAVORS OF BOTH MEATS, AND IS SEASONED WITH A VARIETY OF SPICES FOR A SPICY, COMPLEX FLAVOR.",
+    "chorizo-mixto-text": "Unique flavor and quality Serve them as a filling for vegetables or dishes.",
+    "chorizo-mixto-text2": "Source of protein, Delicious flavor",
+    "chorizo-mixto-text3": "Available in: Bulk ½ kg Bulk 1 kg",
+
+    "chorizo-cerdo": "Pork chorizo",
+    "chorizo-cerdo-link": "/en/productos/chorizo-cerdo",
+    "chorizo-cerdo-info": "IS A TYPE OF SPANISH SAUSAGE MADE FROM CHOPPED PORK. IT IS SEASONED WITH SPICES SUCH AS PAPRIKA AND GARLIC, WHICH GIVES IT A STRONG AND SPICY FLAVOR.",
+    "chorizo-cerdo-text": "Unique flavor and quality Serve them as a filling for vegetables or dishes ",
+    "chorizo-cerdo-text2": "Source of protein, Delicious taste",
+    "chorizo-cerdo-text3": "Available in: Bulk ½ kg Bulk 1 kg",
 
 
-    "button": "See more"
+
+    "button": "See more",
+    "descripcion": "Description",
+    "propiedades": "Properties",
+    "presentacion": "Presentation"
   },
   "nosotros": { 
     "title": "About us",
     "subtitle": "WISLIN is characterized by being a family business, being the fourth generation of cheese producers based in the city of Tijuana; We are focused on the production and distribution of pork and beef cheese and chorizo.    ",
     "parrafo": "We are currently incorporating new products into our distribution route, which are focused on providing our products to stores and groceries in general, generating strategic alliances with other distributors to reach larger sectors of the population.    "
+  },
+  "historia": {
+    "title": "History",
+    "subtitle": "Wislin Farm has a long heritage of cheesemakers for over 40 years in Tijuana Baja California. The family-run business started as a street cheese selling job becoming popular with families, and then starting, they own a local business. Today  Wislin fourth generation with enormous vision has turned the small local business into a growing company that produces and distributes dairy products and sausages in various sectors such as supermarkets, restaurants, and convenience stores    ",
+    "parrafo": "This growth is due to an enormous commitment and dedication to provide a daily quality and freshness in each product, services and attention"
   },
   "contacto": {
     "title": "Contact us",
